@@ -1,0 +1,23 @@
+---
+permalink: sm-mirroring/what-do-i-need-to-know-before-creating-a-mirror-consistency-group.html 
+sidebar: sidebar 
+keywords: creating,  mirror, consistency group 
+summary: Sie müssen den browserbasierten SANtricity Unified Manager installiert haben und die beiden Speicher-Arrays, zwischen denen Daten gespiegelt werden sollen, erkannt haben. Dann, von Unified Manager, wählen Sie das primäre Volume Speicher-Array und klicken Sie auf Starten, um den Browser-basierten SANtricity System Manager zu öffnen. 
+---
+= Was muss ich wissen, bevor ich eine gespiegelte Konsistenzgruppe erstellt?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen den browserbasierten SANtricity Unified Manager installiert haben und die beiden Speicher-Arrays, zwischen denen Daten gespiegelt werden sollen, erkannt haben. Wählen Sie dann im Unified Manager das Storage-Array des primären Volumes aus und klicken Sie auf Start, um den browserbasierten SANtricity System Manager zu öffnen.
+
+Stellen Sie außerdem Folgendes sicher:
+
+* Sie benötigen genügend freie Kapazität auf dem Remote-Speicher-Array, um ein sekundäres Volume zu erstellen, das dem primären Volume entspricht oder dessen Größe Sie spiegeln möchten.
+* Sie müssen über zwei Storage-Arrays verfügen.
+* Jedes Speicher-Array muss zwei Controller haben.
+* Sie müssen das Passwort für die lokalen und Remote-Speicher-Arrays kennen.
+* Ihre lokalen und Remote-Speicher-Arrays müssen über eine Fibre Channel Fabric- oder iSCSI-Schnittstelle verbunden sein.
+

@@ -1,0 +1,149 @@
+---
+permalink: sm-storage/create-synchronous-mirrored-volume.html 
+sidebar: sidebar 
+keywords: create, synchronous, mirrored, volume 
+summary: Ein Volume wird synchron gespiegelt, um Daten in Echtzeit zwischen den Storage-Arrays zu replizieren. So sind Ihre Daten sowohl vor System- als auch vor Standortausfällen geschützt. Dazu wählen Sie das primäre Volume und das sekundäre Volume aus, das Sie für die synchrone Replizierungsbeziehung zwischen einem lokalen Storage Array und einem Remote-Storage-Array verwenden möchten. 
+---
+= Synchrones gespiegeltes Volume erstellen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Volume wird synchron gespiegelt, um Daten in Echtzeit zwischen den Storage-Arrays zu replizieren. So sind Ihre Daten sowohl vor System- als auch vor Standortausfällen geschützt. Dazu wählen Sie das primäre Volume und das sekundäre Volume aus, das Sie für die synchrone Replizierungsbeziehung zwischen einem lokalen Storage Array und einem Remote-Storage-Array verwenden möchten.
+
+.Bevor Sie beginnen
+* Da die Funktion zur synchronen Spiegelung das Management mehrerer Storage Arrays erfordert, ist der browserbasierte SANtricity Unified Manager installiert. Damit sind die beiden Storage-Arrays, zwischen denen Daten gespiegelt werden sollen, bekannt. Dann wählen Sie im Unified Manager das Speicherarray des primären Volumes aus und klicken Sie auf *Start*, um den browserbasierten SANtricity-System-Manager zu öffnen.
+* Sie müssen über zwei Storage-Arrays verfügen.
+* Jedes Speicher-Array muss zwei Controller haben.
+* Auf den Speicher-Arrays der primären und sekundären Volumes können unterschiedliche Betriebssystemversionen ausgeführt werden. Die unterstützte Mindestversion ist 7.84.
+* Sie müssen das Passwort für die lokalen und Remote-Speicher-Arrays kennen.
+* Ihre lokalen und Remote-Speicher-Arrays müssen über eine Fibre Channel Fabric verbunden sein.
+* Sie müssen sowohl die primären als auch die sekundären Volumes erstellt haben, die Sie in der Beziehung zur synchronen Spiegelung verwenden möchten.
+
+
+Der Prozess, ein Volume synchron zu spiegeln, ist ein mehrstufiges Verfahren:
+
+*  1: Select the primary volume
+*  2: Select the secondary volume
+*  3: Select synchronization settings
+
+
+Ein Volume kann nur an einer Spiegelbeziehung beteiligt sein.
+
+
+
+== Schritt 1: Wählen Sie das primäre Volumen
+
+[role="lead"]
+Sie müssen das primäre Volume auswählen, das Sie in der Beziehung zur synchronen Spiegelung verwenden möchten. Dieses Volume besitzt die Hauptrolle in der Spiegelbeziehung.
+
+.Bevor Sie beginnen
+* Sie müssen das primäre Volume erstellt haben, das Sie in der Beziehung zur synchronen Spiegelung verwenden möchten.
+* Das primäre Volume muss ein Standard-Volume sein. Es kann sich nicht um ein Thin-Volume oder ein Snapshot-Volume handelt.
+
+
+.Schritte
+. Führen Sie eine der folgenden Aktionen aus, um auf die Synchronspiegelung zuzugreifen:
++
+** Wählen Sie Menü:Speicher[Synchronous Mirroring > Mirror Volume].
+** Wählen Sie Menü:Speicher[Volumes > Kopierdienste > ein Volume synchron spiegeln]. Das Dialogfeld * Synchronous Mirrored Pair erstellen* wird angezeigt.
+
+
+. Wählen Sie ein vorhandenes Volume aus, das Sie als primäres Volume in der Spiegelung verwenden möchten.
++
+[NOTE]
+====
+Wenn ein Volume in der Kachel Volumes ausgewählt wurde und ausgewählt werden kann, wird es standardmäßig ausgewählt.
+
+====
+. Wählen Sie *Weiter* und gehen Sie zu  2: Select the secondary volume.
+
+
+
+
+== Schritt 2: Wählen Sie das sekundäre Volumen
+
+[role="lead"]
+Sie müssen das sekundäre Volumen auswählen, das Sie in der Spiegelbeziehung verwenden möchten. Dieses Volumen wird die sekundäre Rolle in der Mirror-Beziehung zu halten.
+
+.Bevor Sie beginnen
+* Sie müssen das sekundäre Volumen erstellt haben, das Sie in der Beziehung zur synchronen Spiegelung verwenden möchten.
+* Das sekundäre Volume muss ein Standard-Volume sein. Es kann sich nicht um ein Thin-Volume oder ein Snapshot-Volume handelt.
+* Das sekundäre Volume muss mindestens so groß sein wie das primäre Volume.
+
+
+Wenn Sie ein sekundäres Volume auf dem Remote-Speicher-Array auswählen, zeigt das System eine Liste aller berechtigten Volumes für dieses gespiegelte Paar an. Alle Volumes, die nicht für die Verwendung geeignet sind, werden in dieser Liste nicht angezeigt.
+
+Die in diesem Dialogfeld angezeigten Volumes werden nach der Kapazität sortiert. Dabei beginnt das Volume, das der Kapazität der primären Volume-Kapazität am nächsten ist. Volumes mit identischen Kapazitäten werden alphabetisch sortiert.
+
+.Schritte
+. Wählen Sie das Remote Storage Array aus, auf dem Sie eine Mirror-Beziehung zum lokalen Speicher-Array herstellen möchten.
++
+[NOTE]
+====
+Wenn Ihr Remote-Speicher-Array passwortgeschützt ist, fordert das System zur Eingabe eines Kennworts auf.
+
+====
++
+** Die Liste der Storage-Arrays wird nach ihrem Storage-Array-Namen benannt. Wenn Sie kein Speicher-Array genannt haben, wird es als „unbenannt“ aufgeführt.
+** Wenn das zu verwendende Speicher-Array nicht in der Liste aufgeführt ist, fügen Sie es mit dem Enterprise Management Window (EMW) des SANtricity Storage Managers hinzu. Wählen Sie Menü:Bearbeiten[Speicher-Array hinzufügen].
+
+
+. Wählen Sie ein vorhandenes Volume aus, das Sie als sekundäres Volume in der Spiegelung verwenden möchten.
++
+[NOTE]
+====
+Wird ein sekundäres Volume mit einer Kapazität ausgewählt, die größer als das primäre Volume ist, so ist die nutzbare Kapazität auf die Größe des primären Volumes beschränkt.
+
+====
+. Klicken Sie auf *Weiter* und gehen Sie zu  3: Select synchronization settings.
+
+
+
+
+== Schritt 3: Synchronisierungseinstellungen auswählen
+
+[role="lead"]
+Sie müssen die Priorität festlegen, mit der der Controller-Eigentümer des primären Volumes nach einer Kommunikationsunterbrechung Daten mit dem sekundären Volume neu synchronisiert. Sie müssen außerdem die Resynchronisierung-Richtlinie entweder manuell oder automatisch auswählen.
+
+.Schritte
+. Verwenden Sie den Schieberegler, um die Synchronisationspriorität festzulegen.
++
+Die Synchronisierungspriorität legt fest, wie viele der Systemressourcen verwendet werden, um die erste Synchronisierung abzuschließen und die Neusynchronisierung nach einer Kommunikationsunterbrechung im Vergleich zu Service-I/O-Anforderungen zu ermöglichen.
+
++
+Die in diesem Dialogfeld festgelegte Priorität gilt sowohl für das primäre Volume als auch für das sekundäre Volume. Sie können die Rate auf dem primären Volume zu einem späteren Zeitpunkt ändern, indem Sie Menü:Speicher[synchrone Spiegelung > Mehr > Einstellungen bearbeiten] auswählen.
+
++
+.Mehr zu Synchronisierungsraten
+====
+Es gibt fünf Prioritätsraten für die Synchronisierung:
+
+** Am Niedrigsten
+** Niedrig
+** Mittel
+** Hoch
+** Höchste Wenn die Synchronisierungspriorität auf die niedrigste Rate eingestellt ist, wird die I/O-Aktivität priorisiert und die Neusynchronisierung dauert länger. Wenn die Synchronisierungspriorität auf die höchste Rate festgelegt ist, wird der Neusynchronisierung nach Priorität geordnet, aber die I/O-Aktivität für das Speicher-Array ist möglicherweise betroffen.
+
+
+====
+. Wählen Sie aus, ob Sie die gespiegelten Paare auf dem Remote-Speicher-Array entweder manuell oder automatisch neu synchronisieren möchten.
++
+** *Manuell* (die empfohlene Option) -- Wählen Sie diese Option aus, damit die Synchronisierung manuell fortgesetzt werden muss, nachdem die Kommunikation auf einem gespiegelten Paar wiederhergestellt wurde. Diese Option bietet die beste Möglichkeit für die Wiederherstellung von Daten.
+** *Automatisch* -- Wählen Sie diese Option, um die Neusynchronisierung automatisch zu starten, nachdem die Kommunikation auf einem gespiegelten Paar wiederhergestellt wurde. Um die Synchronisierung manuell fortzusetzen, gehen Sie zum Menü:Speicherung[Synchronous Mirroring], markieren Sie das gespiegelte Paar in der Tabelle, und wählen Sie unter *Mehr* *Fortsetzen*.
+
+
+. Klicken Sie auf *Fertig stellen*, um die Synchronspiegelung abzuschließen.
+
+
+System Manager führt die folgenden Aktionen durch:
+
+* Aktiviert die Funktion Synchronous Mirroring.
+* Startet die erste Synchronisierung zwischen dem lokalen Speicher-Array und dem Remote-Speicher-Array.
+* Legt die Synchronisierungspriorität und die Resynchronisierungsrichtlinie fest.
+
+
+Wählen Sie MENU:Home[Anzeigen von Vorgängen in Arbeit], um den Fortschritt der synchronen Spiegelung anzuzeigen. Dieser Vorgang kann langwierig sein und die System-Performance beeinträchtigen.

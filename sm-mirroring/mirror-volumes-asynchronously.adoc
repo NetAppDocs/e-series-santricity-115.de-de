@@ -1,0 +1,14 @@
+---
+permalink: sm-mirroring/mirror-volumes-asynchronously.html 
+sidebar: sidebar 
+keywords: mirror, volumes, asynchronously 
+summary: 'Mit der Funktion Asynchronous Mirroring können auf einem Volume zwei physische Kopien erstellt werden, wodurch die Datenverfügbarkeit vereinfacht und Ausfallzeiten minimiert werden. Jede asynchrone Spiegelbeziehung umfasst ein Volume in einer primären Rolle und ein Volume (auf einem anderen Storage Array) in einer sekundären Rolle.' 
+---
+= Asynchrone Spiegelung von Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Funktion Asynchronous Mirroring können auf einem Volume zwei physische Kopien erstellt werden, wodurch die Datenverfügbarkeit vereinfacht und Ausfallzeiten minimiert werden. Jede asynchrone Spiegelbeziehung umfasst ein Volume in einer primären Rolle und ein Volume (auf einem anderen Storage Array) in einer sekundären Rolle.

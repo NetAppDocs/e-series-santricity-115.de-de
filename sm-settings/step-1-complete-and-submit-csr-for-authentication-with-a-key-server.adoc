@@ -1,0 +1,43 @@
+---
+permalink: sm-settings/step-1-complete-and-submit-csr-for-authentication-with-a-key-server.html 
+sidebar: sidebar 
+keywords: complete, ca certificate, signing, request, csr, key server 
+summary: 'Um ein Zertifikat für eine Zertifizierungsstelle (Certificate Authority, CA) für einen Schlüsselverwaltungsserver zu erhalten, müssen Sie zuerst eine CSR-Datei (Certificate Signing Request) erstellen.' 
+---
+= Füllen Sie die Anforderung zum Signieren des CA-Zertifikats (CSR) für einen Schlüsselserver aus
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um ein Zertifikat für eine Zertifizierungsstelle (Certificate Authority, CA) für einen Schlüsselverwaltungsserver zu erhalten, müssen Sie zuerst eine CSR-Datei (Certificate Signing Request) erstellen.
+
+.Bevor Sie beginnen
+* Sie müssen mit einem Benutzerprofil angemeldet sein, das Sicherheitsadministratorberechtigungen enthält. Andernfalls werden keine Zertifikatfunktionen angezeigt.
+
+
+In dieser Aufgabe wird beschrieben, wie Sie die CSR-Dateien (Certificate Signing Requests) generieren, die Sie an eine CA senden, um signierte Zertifikate für einen Schlüsselverwaltungsserver zu erhalten. Während dieser Aufgabe müssen Sie Informationen über Ihr Unternehmen angeben.
+
+.Schritte
+. Wählen Sie Menü:Einstellungen[Zertifikate].
+. Wählen Sie auf der Registerkarte * Key Management* die Option *Complete CSR* aus.
+. Geben Sie die folgenden Informationen ein:
++
+** *Allgemeiner Name* -- Ein Name, der diese CSR identifiziert, wie z.B. den Namen des Speicherarrays, der in den Zertifikatdateien angezeigt wird.
+** *Organisation* -- der vollständige, rechtliche Name Ihres Unternehmens oder Ihrer Organisation. Fügen Sie Suffixe wie Inc. Oder Corp. Mit ein
+** *Organisationseinheit (optional)* -- die Abteilung Ihrer Organisation, die das Zertifikat bearbeitet.
+** *Stadt/Ort* -- die Stadt oder der Ort, in dem sich Ihre Organisation befindet.
+** *Bundesland/Region (optional)* -- der Staat oder die Region, in der sich Ihre Organisation befindet.
+** *Land ISO Code* -- der zweistellige ISO-Code (International Organization for Standardization), wie die USA, wo sich Ihre Organisation befindet.
+
+
+. Klicken Sie Auf *Download*.
++
+Eine .CSR-Datei wird auf Ihrem lokalen System gespeichert.
+
+. Senden Sie die .CSR-Datei(en) an Ihre CA.
+
+
+Wenn Sie die Client- und Serverzertifikate vom Schlüsselverwaltungsserver beziehen, importieren Sie diese zur Authentifizierung mit den Speicher-Array-Controllern.

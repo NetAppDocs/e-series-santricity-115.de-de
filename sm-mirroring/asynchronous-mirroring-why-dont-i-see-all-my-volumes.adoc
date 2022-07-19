@@ -1,0 +1,21 @@
+---
+permalink: sm-mirroring/asynchronous-mirroring-why-dont-i-see-all-my-volumes.html 
+sidebar: sidebar 
+keywords: asynchronous, mirror, all my volumes 
+summary: Wenn Sie ein primäres Volume für ein gespiegeltes Paar auswählen, zeigt der System Manager eine Liste aller berechtigten Volumes für dieses gespiegelte Paar an. Alle Volumes, die nicht für die Verwendung geeignet sind, werden in dieser Liste nicht angezeigt. 
+---
+= Asynchrones Spiegeln - Warum sehe ich nicht alle meine Volumen?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie ein primäres Volume für ein gespiegeltes Paar auswählen, zeigt der System Manager eine Liste aller berechtigten Volumes für dieses gespiegelte Paar an. Alle Volumes, die nicht für die Verwendung geeignet sind, werden in dieser Liste nicht angezeigt.
+
+Die Volumes können aus den folgenden Gründen nicht berechtigt sein:
+
+* Das Volume ist ein nicht standardmäßiges Volume, wie z. B. ein Snapshot-Volume.
+* Die Lautstärke ist nicht optimal.
+* Das Volume beteiligt sich bereits an einer Spiegelbeziehung.
+

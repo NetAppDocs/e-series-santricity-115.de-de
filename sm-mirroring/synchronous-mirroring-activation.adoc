@@ -1,0 +1,31 @@
+---
+permalink: sm-mirroring/synchronous-mirroring-activation.html 
+sidebar: sidebar 
+keywords: synchronous, mirror, activation 
+summary: Die Funktion Synchronous Mirroring wird automatisch aktiviert, wenn das erste synchrone gespiegelte Paar auf einem Speicher-Array erstellt wird. 
+---
+= Aktivierung der synchronen Spiegelung
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Funktion Synchronous Mirroring wird automatisch aktiviert, wenn das erste synchrone gespiegelte Paar auf einem Speicher-Array erstellt wird.
+
+Wenn die Funktion Synchronous Mirroring aktiviert ist, führt der System Manager folgende Aktionen durch:
+
+* Behält sich den Port mit der höchsten Nummer der HIC des Controllers bei der Datenübertragung mit gespiegelten Daten vor.
++
+Auf diesem Port empfangene I/O-Anfragen werden nur von dem bevorzugten Remote-Controller-Eigentümer des sekundären Volumes im gespiegelten Paar akzeptiert. (Reservierungen für das primäre Volume sind zulässig.)
+
+* Erstellt zwei reservierte Kapazitäts-Volumes, eines für jeden Controller, die zum Protokollieren von Schreibinformationen für die Wiederherstellung nach Controller-Resets und anderen temporären Unterbrechungen verwendet werden.
++
+Die Kapazität eines jeden Volumes beträgt 128 MiB. Wenn die Volumes jedoch in einen Pool aufgenommen werden, wird 4 gib für jedes Volume reserviert.
+
+
+
+Mit der Funktion Synchronous Mirroring gibt es eine Begrenzung für die Anzahl der Volumes, die auf einem bestimmten Storage Array unterstützt werden. Bevor Sie die synchrone Spiegelung aktivieren, stellen Sie sicher, dass die Anzahl der konfigurierten Volumes auf Ihrem Storage-Array kleiner als das unterstützte Limit ist. Wenn synchrones Spiegeln aktiv ist, werden die zwei reservierten Kapazitäts-Volumes mit der erstellten Volume-Grenze gezählt.
+
+Wenn Sie die synchrone Spiegelung zu einem späteren Zeitpunkt deaktivieren müssen, wechseln Sie zum Menü:Storage[Synchronous Mirroring > Sonstige Aufgaben > Deaktivieren].

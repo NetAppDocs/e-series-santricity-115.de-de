@@ -1,0 +1,28 @@
+---
+permalink: sm-settings/how-certificates-work-sam.html 
+sidebar: sidebar 
+keywords: ca certificates, csr files 
+summary: 'Eine Zertifizierungsstelle (CA) ist eine vertrauenswürdige Einheit, die elektronische Dokumente, sogenannte digitale Zertifikate, für Internet-Sicherheit ausstellt. Diese Zertifikate identifizieren Website-Besitzer, die sichere Verbindungen zwischen Clients und Servern ermöglichen.' 
+---
+= Funktionsweise von CA-Zertifikaten
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Zertifizierungsstelle (CA) ist eine vertrauenswürdige Einheit, die elektronische Dokumente, sogenannte digitale Zertifikate, für Internet-Sicherheit ausstellt. Diese Zertifikate identifizieren Website-Besitzer, die sichere Verbindungen zwischen Clients und Servern ermöglichen.
+
+Wenn Sie einen Browser öffnen und über den Controller-Managementport eine Verbindung zum System Manager herstellen möchten, versucht der Browser zu überprüfen, ob der Controller des Speicherarrays eine vertrauenswürdige Quelle ist. Wenn der Browser ein digitales Zertifikat für den Controller nicht finden kann, wird darauf aufmerksam gemacht, dass das Zertifikat nicht von einer anerkannten Behörde signiert ist und Sie werden gefragt, ob Sie fortfahren möchten. Wenn Sie diese Warnung nicht mehr sehen möchten, müssen Sie ein signiertes digitales Zertifikat von einer Zertifizierungsstelle erhalten.
+
+Wenn Sie einen externen Schlüsselverwaltungsserver mit der Laufwerkssicherheitsfunktion verwenden, können Sie auch Zertifikate zur Authentifizierung zwischen diesem Server und den Controllern erstellen oder das selbstsignierte Zertifikat vom Speicher-Array akzeptieren.
+
+Zur Verwendung eines digitalen Zertifikats von einer vertrauenswürdigen Behörde sind folgende Schritte erforderlich:
+
+. Gehen Sie zum Menü:Einstellungen[Zertifikate]. Ihre Benutzeranmeldung muss Sicherheitsadministratorberechtigungen enthalten; andernfalls wird *Zertifikate* nicht auf der Seite angezeigt.
+. Erstellen Sie für jeden Controller oder für einen Schlüsselverwaltungsserver eine Zertifikatsignierungsanforderung (CSR).
+. Senden Sie die .CSR-Datei(en) an eine CA, und warten Sie dann, bis sie Ihnen die Zertifikate schicken.
+. Importieren Sie das vertrauenswürdige Zertifikat (Zwischen- und Stammzertifikat) aus der Zertifizierungsstelle. Diese Zertifikate stellen einen Vertrauenspunkt für eine CA-Hierarchie her.
+. Importieren Sie die signierten Managementzertifikate für jeden Controller oder den Schlüsselverwaltungsserver.
+

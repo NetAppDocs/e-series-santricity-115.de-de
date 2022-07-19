@@ -1,0 +1,130 @@
+---
+permalink: sm-interface/how-do-i-know-which-host-operating-system-type-is-correct.html 
+sidebar: sidebar 
+keywords: host, operating, system, type, correct 
+summary: 'Das Feld Host-Betriebssystemtyp enthält das Betriebssystem des Hosts. Sie können den empfohlenen Hosttyp aus der Dropdown-Liste auswählen oder dem Host Context Agent (HCA) die Konfiguration des Hosts und des entsprechenden Host-Betriebssystems ermöglichen.' 
+---
+= Wie kann ich feststellen, welches Host-Betriebssystem richtig ist?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Feld Host-Betriebssystemtyp enthält das Betriebssystem des Hosts. Sie können den empfohlenen Hosttyp aus der Dropdown-Liste auswählen oder dem Host Context Agent (HCA) die Konfiguration des Hosts und des entsprechenden Host-Betriebssystems ermöglichen.
+
+|===
+| Host-Betriebssystem | Betriebssystem und Multipath-Treiber 
+
+
+ a| 
+AIX MPIO
+ a| 
+Das Betriebssystem Advanced Interactive Executive (AIX) und der native MPIO Treiber
+
+
+
+ a| 
+AVT_4M
+ a| 
+Weitere Informationen finden Sie in der SGI-Installationsdokumentation
+
+
+
+ a| 
+Werkseitige Standardeinstellung
+ a| 
+Dies ist für den Erststart des Storage Arrays reserviert und sollte an das Host-Betriebssystem und den Multipath-Treiber angepasst werden, der für den jeweiligen Host verwendet wird
+
+
+
+ a| 
+HP-UX ERHÄLTLICH
+ a| 
+Das HP-UX-Betriebssystem mit nativem Multipath-Treiber
+
+
+
+ a| 
+Linux (ATTO)
+ a| 
+Linux-Betriebssystem und ATTO Technology, Inc.-Treiber (ATTO FC-HBAs erforderlich)
+
+
+
+ a| 
+Linux (DM-MP)
+ a| 
+Das Linux-Betriebssystem und der native DM-MP-Treiber
+
+
+
+ a| 
+Linux (Pathmanager)
+ a| 
+Weitere Informationen zum Linux-Betriebssystem und dem proprietären SGI Multipath-Treiber finden Sie in der SGI-Installationsdokumentation
+
+
+
+ a| 
+Mac OS
+ a| 
+Mac OS und ATTO Technology, Inc. Treiber
+
+
+
+ a| 
+ONTAP
+ a| 
+FlexArray
+
+
+
+ a| 
+Solaris (Version 11 oder höher)
+ a| 
+Das Betriebssystem Solaris 11 oder höher und der native MPxIO-Treiber
+
+
+
+ a| 
+Solaris (Version 10 oder früher)
+ a| 
+Das Betriebssystem Solaris 10 oder früher und der native MPxIO-Treiber
+
+
+
+ a| 
+SERVICE
+ a| 
+IBM SAN Volume Controller
+
+
+
+ a| 
+VMware
+ a| 
+Das ESXi Betriebssystem
+
+
+
+ a| 
+Windows oder Windows Cluster
+ a| 
+Das Windows Server-Betriebssystem und Windows MPIO mit einem DSM-Treiber
+
+
+
+ a| 
+Windows (ATTO)
+ a| 
+Das Windows-Betriebssystem und der ATTO Technology, Inc.-Treiber
+
+|===
+Nachdem die HCA installiert und der Speicher mit dem Host verbunden ist, sendet die HCA die Hosttopologie über den I/O-Pfad an die Speicher-Controller. Auf der Grundlage der Host-Topologie definieren die Storage Controller automatisch den Host und die zugehörigen Host-Ports und legen anschließend den Host-Typ fest.
+
+[NOTE]
+====
+Wenn der HCA den empfohlenen Hosttyp nicht wählt, müssen Sie den Hosttyp manuell in System Manager einstellen.
+
+====

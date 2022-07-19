@@ -1,0 +1,67 @@
+---
+permalink: sm-settings/step-1-complete-a-csr.html 
+sidebar: sidebar 
+keywords: complete, ca certificate, signing, request, csr, controllers 
+summary: 'Um ein Zertifikat der Zertifizierungsstelle (CA) für die Controller des Speicherarrays zu erhalten, müssen Sie zuerst eine CSR-Datei (Certificate Signing Request) für jeden Controller im Speicher-Array erstellen.' 
+---
+= Füllen Sie eine CSR (CA Certificate Signing Request) für die Controller aus
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um ein Zertifikat der Zertifizierungsstelle (Certificate Authority, CA) für die Controller des Speicherarrays zu erhalten, müssen Sie zuerst eine CSR-Datei (Certificate Signing Request) für jeden Controller im Speicher-Array generieren.
+
+.Bevor Sie beginnen
+* Sie müssen mit einem Benutzerprofil angemeldet sein, das Sicherheitsadministratorberechtigungen enthält. Andernfalls werden keine Zertifikatfunktionen angezeigt.
+
+
+In dieser Aufgabe wird beschrieben, wie Sie die CSR-Dateien (Certificate Signing Requests) generieren, die Sie an eine CA senden, um signierte Managementzertifikate für die Controller zu erhalten. Sie müssen Informationen über Ihr Unternehmen, die IP-Adresse oder den DNS-Namen der Controller angeben. Während dieser Aufgabe wird eine CSR-Datei erzeugt, wenn es nur einen Controller im Speicher-Array und zwei .CSR-Dateien gibt, wenn es zwei Controller gibt.
+
+.Schritte
+. Wählen Sie Menü:Einstellungen[Zertifikate].
+. Wählen Sie auf der Registerkarte *Array Management* die Option *Complete CSR* aus.
++
+[NOTE]
+====
+Wenn ein Dialogfeld angezeigt wird, in dem Sie aufgefordert werden, ein selbstsigniertes Zertifikat für den zweiten Controller anzunehmen, klicken Sie zum Fortfahren auf *Selbstsigniertes Zertifikat akzeptieren*.
+
+====
+. Geben Sie die folgenden Informationen ein, und klicken Sie dann auf *Weiter*:
++
+** *Organisation* -- der vollständige, rechtliche Name Ihres Unternehmens oder Ihrer Organisation. Fügen Sie Suffixe wie Inc. Oder Corp. Mit ein
+** *Organisationseinheit (optional)* -- die Abteilung Ihrer Organisation, die das Zertifikat bearbeitet.
+** *Stadt/Ort* -- die Stadt, in der sich Ihr Speicher-Array oder Geschäft befindet.
+** *Bundesland/Region (optional)* -- der Staat oder die Region, in der sich Ihr Speicher-Array oder Ihr Geschäft befindet.
+** *Land ISO Code* -- der zweistellige ISO-Code Ihres Landes (International Organization for Standardization), wie z. B. die USA.
+
+
++
+[CAUTION]
+====
+Einige Felder sind möglicherweise bereits mit den entsprechenden Informationen ausgefüllt, z. B. mit der IP-Adresse des Controllers. Ändern Sie die vorausgefüllten Werte nur, wenn Sie sich sicher sind, dass sie nicht korrekt sind. Wenn Sie zum Beispiel noch keinen CSR-Vorgang abgeschlossen haben, wird die Controller-IP-Adresse auf „`localhost.`“ gesetzt. In diesem Fall müssen Sie „`localhost`“ in den DNS-Namen oder die IP-Adresse des Controllers ändern.
+
+====
+. Überprüfen oder geben Sie die folgenden Informationen über Controller A in Ihrem Speicher-Array ein:
++
+** *Controller Ein gemeinsamer Name* -- die IP-Adresse oder der DNS-Name von Controller A wird standardmäßig angezeigt. Stellen Sie sicher, dass diese Adresse korrekt ist. Sie muss mit den Angaben übereinstimmen, die Sie für den Zugriff auf System Manager im Browser eingeben.
+** *Controller Eine alternative IP-Adresse* -- Wenn der gemeinsame Name eine IP-Adresse ist, können Sie optional weitere IP-Adressen oder Aliase für Controller A eingeben Verwenden Sie für mehrere Einträge ein kommagetrenntes Format.
+** *Controller Ein alternativer DNS-Name* -- Wenn der gemeinsame Name ein DNS-Name ist, geben Sie weitere DNS-Namen für Controller A. ein Verwenden Sie für mehrere Einträge ein kommagetrenntes Format. Falls es keine alternativen DNS-Namen gibt, aber Sie im ersten Feld einen DNS-Namen eingegeben haben, kopieren Sie diesen Namen hier. Wenn das Speicher-Array nur über einen Controller verfügt, steht die *Finish*-Taste zur Verfügung. Wenn das Speicher-Array über zwei Controller verfügt, steht die Schaltfläche *Weiter* zur Verfügung.
+
+
++
+[NOTE]
+====
+Klicken Sie nicht auf den Link *Skip this Step*, wenn Sie eine CSR-Anfrage erstellen. Dieser Link wird in Fehlerwiederherstellungssituationen bereitgestellt. In seltenen Fällen kann eine CSR-Anfrage auf einem Controller fehlschlagen, aber nicht auf dem anderen. Über diesen Link können Sie den Schritt zum Erstellen einer CSR-Anfrage für Controller A überspringen, wenn er bereits definiert ist, und mit dem nächsten Schritt zum erneuten Erstellen einer CSR-Anfrage auf Controller B fortfahren
+
+====
+. Wenn nur ein Controller vorhanden ist, klicken Sie auf *Fertig stellen*. Wenn zwei Controller vorhanden sind, klicken Sie auf *Weiter*, um die Daten für Controller B einzugeben (wie oben), und klicken Sie dann auf *Fertig stellen*.
++
+Für einen einzelnen Controller wird eine .CSR-Datei auf Ihr lokales System heruntergeladen. Bei Dual-Controllern werden zwei .CSR-Dateien heruntergeladen. Der Speicherort des Downloads hängt von Ihrem Browser ab.
+
+. Senden Sie die .CSR-Datei(en) an Ihre CA.
+
+
+Wenn Sie die digitalen Zertifikate erhalten, importieren Sie die entsprechenden Zertifikatdateien, die die CA an Sie gesendet hat.

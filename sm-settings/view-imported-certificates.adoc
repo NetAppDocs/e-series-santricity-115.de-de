@@ -1,0 +1,56 @@
+---
+permalink: sm-settings/view-imported-certificates.html 
+sidebar: sidebar 
+keywords: view, imported, certificate, information 
+summary: Auf der Seite Zertifikate können Sie den Zertifikatstyp, die ausstellende Behörde und den gültigen Datumsbereich der zuvor importierten Zertifikate anzeigen. 
+---
+= Anzeigen importierter Zertifikatinformationen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite Zertifikate können Sie den Zertifikatstyp, die ausstellende Behörde und den gültigen Datumsbereich der zuvor importierten Zertifikate anzeigen.
+
+.Bevor Sie beginnen
+* Sie müssen mit einem Benutzerprofil angemeldet sein, das Sicherheitsadministratorberechtigungen enthält. Andernfalls werden keine Zertifikatfunktionen angezeigt.
+
+
+In dieser Aufgabe wird beschrieben, wie Informationen für vom Benutzer installierte oder vorinstallierte Zertifikate angezeigt werden.
+
+.Schritte
+. Wählen Sie Menü:Einstellungen[Zertifikate].
+. Wählen Sie eine der Registerkarten aus, um Informationen zu Managementzertifikaten für die Controller, vertrauenswürdige Zertifikate und Zertifikate für einen Schlüsselverwaltungsserver anzuzeigen.
++
+[cols="25h,~"]
+|===
+| Registerkarte | Beschreibung 
+
+
+ a| 
+Array-Management
+ a| 
+Zeigen Sie Informationen zu allen Serverzertifikaten an, die für die Controller importiert wurden.
+
+
+
+ a| 
+Bewährt
+ a| 
+Informationen zu allen vertrauenswürdigen (Root-) Zertifikaten anzeigen, die für die Controller importiert wurden. Verwenden Sie das Filterfeld unter *Zertifikate anzeigen, die...* sind, um entweder vom Benutzer installierte oder vorinstallierte Zertifikate anzuzeigen.
+
+** *Vom Benutzer installiert*. Zertifikate, die ein Benutzer zum Speicher-Array hochgeladen hat (einschließlich vertrauenswürdiger Zertifikate, LDAPS-Zertifikate und Identity Federation-Zertifikaten).
+** *Vorinstalliert*. Im Speicher-Array enthaltene Zertifikate.
+
+
+
+
+ a| 
+Verschlüsselungs-Management
+ a| 
+Informationen zu allen Management-Zertifikaten anzeigen, die für einen externen Schlüsselverwaltungsserver importiert wurden.
+
+|===
+

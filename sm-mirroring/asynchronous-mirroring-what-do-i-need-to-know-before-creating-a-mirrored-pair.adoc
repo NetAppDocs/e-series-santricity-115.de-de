@@ -1,0 +1,24 @@
+---
+permalink: sm-mirroring/asynchronous-mirroring-what-do-i-need-to-know-before-creating-a-mirrored-pair.html 
+sidebar: sidebar 
+keywords: asynchronous, mirror, create, mirrored pair 
+summary: Ihr Speicher-Array muss mindestens eine gespiegelte Konsistenzgruppe enthalten. 
+---
+= Asynchrones Spiegeln - Was muss ich wissen, bevor ich ein gespiegeltes Paar erstellt habe?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ihr Speicher-Array muss mindestens eine gespiegelte Konsistenzgruppe enthalten.
+
+Stellen Sie außerdem Folgendes sicher:
+
+* Sie benötigen genügend freie Kapazität auf dem Remote-Speicher-Array, um ein sekundäres Volume zu erstellen, das dem primären Volume entspricht oder dessen Größe Sie spiegeln möchten.
+* Sie müssen über zwei Storage-Arrays verfügen.
+* Jedes Speicher-Array muss zwei Controller haben.
+* Sie müssen das Passwort für die lokalen und Remote-Speicher-Arrays kennen.
+* Ihre lokalen und Remote-Speicher-Arrays müssen über eine Fibre Channel Fabric- oder iSCSI-Schnittstelle verbunden sein.
+* Sie müssen den browserbasierten SANtricity Unified Manager installiert haben und die beiden Speicher-Arrays, zwischen denen Daten gespiegelt werden sollen, erkannt haben. Wählen Sie dann im Unified Manager das Storage-Array des primären Volumes aus und klicken Sie auf Start, um den browserbasierten SANtricity System Manager zu öffnen.
+

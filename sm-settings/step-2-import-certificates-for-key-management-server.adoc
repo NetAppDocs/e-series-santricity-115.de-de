@@ -1,0 +1,51 @@
+---
+permalink: sm-settings/step-2-import-certificates-for-key-management-server.html 
+sidebar: sidebar 
+keywords: import, key, management, server, certificates 
+summary: 'Für das externe Verschlüsselungsmanagement importieren Sie Zertifikate zur Authentifizierung zwischen dem Storage-Array und dem Verschlüsselungsmanagement-Server, damit sich die beiden Einheiten gegenseitig vertrauen können. Es gibt zwei Arten von Zertifikaten: Das Clientzertifikat überprüft die Controller, während das Zertifikat für den Schlüsselverwaltungsserver den Server validiert.' 
+---
+= Importieren Sie die Zertifikate für den Schlüsselverwaltungsserver
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für das externe Verschlüsselungsmanagement importieren Sie Zertifikate zur Authentifizierung zwischen dem Storage-Array und dem Verschlüsselungsmanagement-Server, damit sich die beiden Einheiten gegenseitig vertrauen können. Es gibt zwei Arten von Zertifikaten: Das Clientzertifikat überprüft die Controller, während das Zertifikat für den Schlüsselverwaltungsserver den Server validiert.
+
+.Bevor Sie beginnen
+* Sie müssen mit einem Benutzerprofil angemeldet sein, das Sicherheitsadministratorberechtigungen enthält. Andernfalls werden keine Zertifikatfunktionen angezeigt.
+* Für das Speicherarray ist ein Clientzertifikat verfügbar.
++
+[NOTE]
+====
+Ein Client-Zertifikat validiert die Controller des Speicherarrays, damit der Schlüsselverwaltungsserver ihren IP-Adressen vertrauen kann. Um ein Client-Zertifikat zu erhalten, müssen Sie eine CSR für das Speicher-Array ausfüllen und es anschließend auf den Schlüsselverwaltungsserver hochladen. Generieren Sie vom Server ein Clientzertifikat.
+
+====
+* Das Zertifikat für den Schlüsselmanagement-Server ist verfügbar.
++
+[NOTE]
+====
+Ein Zertifikat für den Schlüsselmanagementserver validiert den Server, damit das Speicherarray seine IP-Adresse anvertrauen kann. Um ein Zertifikat für den Schlüsselverwaltungsserver zu erhalten, müssen Sie es vom Schlüsselverwaltungsserver generieren.
+
+====
+
+
+In dieser Aufgabe wird beschrieben, wie Zertifikatdateien für die Authentifizierung zwischen den Speicher-Array-Controllern und dem Schlüsselverwaltungsserver hochgeladen werden.
+
+.Schritte
+. Wählen Sie Menü:Einstellungen[Zertifikate].
+. Wählen Sie auf der Registerkarte * Key Management* die Option *Import* aus.
++
+Es wird ein Dialogfeld zum Importieren der Zertifikatdateien geöffnet.
+
+. Klicken Sie auf die Schaltflächen *Durchsuchen*, um die Dateien auszuwählen.
++
+Die Dateinamen werden im Dialogfeld angezeigt.
+
+. Klicken Sie Auf *Import*.
++
+Die Datei(en) werden hochgeladen und validiert.
+
+

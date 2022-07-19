@@ -1,0 +1,102 @@
+---
+permalink: sm-mirroring/considerations-for-setting-up-asynchronous-mirroring.html 
+sidebar: sidebar 
+keywords: considerations, setting up, asynchronous, mirror 
+summary: Beachten Sie bei Ihrer Planung wichtige Überlegungen, damit eine erfolgreiche Konfiguration und Einrichtung gewährleistet ist. 
+---
+= Überlegungen beim Einrichten von asynchroner Spiegelung
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beachten Sie bei Ihrer Planung wichtige Überlegungen, damit eine erfolgreiche Konfiguration und Einrichtung gewährleistet ist.
+
+
+
+== Starten Sie SANtricity Unified Manager
+
+* Jeder Controller im primären Array und im sekundären Array muss über einen konfigurierten Ethernet-Managementport verfügen und mit dem Netzwerk verbunden sein.
+* Die asynchrone Spiegelung wird durch Öffnen von SANtricity Unified Manager konfiguriert. Für jede Spiegelbeziehung muss sowohl die lokalen als auch die Remote Storage-Systeme von SANtricity Unified Manager erkannt und aufgelistet werden.
+* Sie müssen den browserbasierten SANtricity Unified Manager installiert haben und die beiden Speicher-Arrays, zwischen denen Daten gespiegelt werden sollen, erkannt haben. Wählen Sie dann im Unified Manager das Storage-Array des primären Volumes aus und klicken Sie auf Start, um den browserbasierten SANtricity System Manager zu öffnen.
+
+
+
+
+== Wird Aktiviert
+
+Bevor Sie die asynchrone Spiegelung verwenden, müssen Sie sie auf jedem Storage-Array aktivieren, das an Spiegelungsvorgängen teilnimmt. Die Aktivierung kann über die CLI, REST-API oder die grafische Managementoberfläche (GUI) erfolgen.
+
+* Für Systeme, die von SANtricity System Manager (E2800, E5700, EF570) gemanagt werden, ist kein separater Aktivierungs-Schritt erforderlich. Die Aktivierung erfolgt im Hintergrund, während Spiegelgruppen/Paare eingerichtet werden.
+* Bei Systemen, die von SANtricity Storage Manager (E2700, E5600, EF560) gemanagt werden, wird die asynchrone Spiegelung über die GUI des älteren Systems aktiviert, das nicht von SANtricity System Manager gemanagt wird. Wenn Sie iSCSI für asynchrone Spiegelung verwenden, ist der Aktivierungsschritt nicht erforderlich.
+
+
+
+
+== Webservices Zertifikate und empfohlene Browser
+
+* * Vertrauenswürdige Zertifikate*
++
+Für die Spiegelung an Systemen, die vom SANtricity System Manager verwaltet werden, wird empfohlen, die vertrauenswürdigen Zertifikate für die Webservices in SANtricity Unified Manager zu importieren, damit sich die Speichersysteme mit dem Webserver authentifizieren können. SANtricity Unified Manager enthält folgende Schritte:
+
++
+.. Generieren Sie eine Zertifikatsignierungsanforderung (CSR) für den Computer, auf dem SANtricity Unified Manager installiert ist.
+.. Senden Sie die CSR an eine Zertifizierungsstelle (CA).
+.. Wenn die Zertifizierungsstelle die signierten Zertifikate zurücksendet, importieren Sie sie in Unified Manager.
+
+
+* *Selbstsignierte Zertifikate*
++
+Es können auch selbstsignierte Zertifikate verwendet werden. Wenn der Administrator versucht, die Spiegelung zu konfigurieren, ohne signierte Zertifikate zu importieren, zeigt SANtricity System Manager ein Fehlerdialogfeld an, in dem der Administrator das selbstsignierte Zertifikat akzeptieren kann. In diesem Fall wird empfohlen, die neueste Version von Chrome oder Firefox als Browser zu verwenden.
+
++
+Sie können ein selbstsigniertes Zertifikat akzeptieren oder Ihr eigenes Sicherheitszertifikat mit Unified Manager installieren und zum Menü:Zertifikat[Zertifikatverwaltung] navigieren.
+
+
+
+
+
+== Unterstützte Verbindungen
+
+Beim asynchronen Spiegeln können FC- oder iSCSI-Verbindungen genutzt werden oder für die Kommunikation zwischen lokalen und Remote-Storage-Systemen. Beim Erstellen einer SpiegelungsConsistency Group (auch als asynchrone Spiegelgruppe bezeichnet) kann der Administrator entweder FC oder iSCSI für diese Gruppe auswählen, wenn beide mit dem Remote-Storage-Array verbunden sind. Es gibt kein Failover von einem Kanaltyp zum anderen.
+
+Die asynchrone Spiegelung nutzt die Host-seitigen I/O-Ports des Storage-Arrays, um gespiegelte Daten von der primären Seite zur sekundären Seite zu übermitteln.
+
+* *Spiegelung über eine Fibre-Channel-Schnittstelle*
++
+Jeder Controller des Storage-Arrays ordnet den am höchsten nummerierten FC-Host-Port der Spiegelung zu.
+
++
+Wenn der Controller sowohl Basis-FC-Ports als auch Host-Schnittstellenkarte (HIC) FC-Ports aufweist, ist der Port mit der höchsten Nummer auf einer HIC. Alle Hosts, die am dedizierten Port angemeldet sind, werden abgemeldet, und es werden keine Anmeldeanforderungen für den Host akzeptiert. I/O-Anfragen auf diesem Port werden nur von Controllern akzeptiert, die an Spiegelungsvorgängen beteiligt sind.
+
++
+Die dedizierten Spiegelungs-Ports müssen an eine FC-Fabric-Umgebung angeschlossen werden, die den Verzeichnisdienst und die Nameservice-Schnittstellen unterstützt. Insbesondere werden FC-AL und Point-to-Point nicht als Konnektivitätsoptionen zwischen den Controllern unterstützt, die an gespiegelten Beziehungen beteiligt sind.
+
+* *Spiegelung über eine iSCSI-Schnittstelle*
++
+Im Gegensatz zu FC erfordert iSCSI keinen dedizierten Port. Wenn Sie asynchrone Spiegelung in iSCSI-Umgebungen einsetzen, müssen Sie keine der Front-End iSCSI-Ports des Storage-Arrays für die asynchrone Spiegelung verwenden. Diese Ports werden sowohl für asynchronen Spiegeldatenverkehr als auch für Array-I/O-Verbindungen gemeinsam genutzt.
+
++
+Der Controller verfügt über eine Liste der Remote-Speichersysteme, mit denen der iSCSI-Initiator versucht, eine Sitzung einzurichten. Der erste Port, der eine iSCSI-Verbindung erfolgreich herstellt, wird für die anschließende Kommunikation mit dem Remote-Speicher-Array verwendet. Wenn die Kommunikation fehlschlägt, wird eine neue Sitzung unter Verwendung aller verfügbaren Ports versucht.
+
++
+ISCSI-Ports werden auf Array-Ebene für Port konfiguriert. Intercontroller Kommunikation für Konfigurationsnachrichten und Datentransfer verwendet die globalen Einstellungen, einschließlich Einstellungen für:
+
++
+** VLAN: Sowohl lokale als auch Remote-Systeme müssen die gleiche VLAN-Einstellung für die Kommunikation haben
+** ISCSI-Listening-Port
+** Jumbo-Frames
+** Ethernet-Priorität
+
+
++
+[NOTE]
+====
+Die iSCSI-Intercontroller-Kommunikation muss einen Host-Connect-Port und nicht den Management-Ethernet-Port verwenden.
+
+====
+
+
+Die asynchrone Spiegelung nutzt die Host-seitigen I/O-Ports des Storage-Arrays, um gespiegelte Daten von der primären Seite zur sekundären Seite zu übermitteln. Da asynchrones Spiegeln für latenzarme, kostengünstigere Netzwerke ausgelegt ist, eignen sich iSCSI- (und damit TCP/IP-basierte) Verbindungen hervorragend für die IT. Wenn in iSCSI-Umgebungen asynchrone Spiegelung verwendet wird, müssen keine der Front-End-iSCSI-Ports des Arrays für asynchrone Spiegelung verwendet werden. Diese Ports werden sowohl für asynchronen Spiegeldatenverkehr als auch für Array-I/O-Verbindungen gemeinsam genutzt

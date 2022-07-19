@@ -1,0 +1,70 @@
+---
+permalink: sm-interface/whats-new-in-sam.html 
+sidebar: sidebar 
+keywords: new, santricity, system manager 
+summary: System Manager enthält die folgenden neuen Funktionen. 
+---
+= Was ist neu in SANtricity System Manager
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+System Manager enthält die folgenden neuen Funktionen.
+
+
+
+== Neue Funktionen in Version 11.53
+
+Diese Version enthält nur geringfügige Verbesserungen und Korrekturen.
+
+
+
+== Neue Funktionen in Version 11.52
+
+|===
+| Neues Feature | Beschreibung 
+
+
+ a| 
+NVMe-over-FC-Host-Schnittstelle
+ a| 
+Eine NVMe-over-Fibre-Channel-Host-Verbindung kann jetzt für EF570 oder E5700 Controller-Modelle bestellt werden. Zusätzlich unterstützt sie NVMe over RoCE und NVMe over InfiniBand. System Manager enthält Statistiken für diesen neuen Verbindungstyp im Menü:Einstellungen[System] unter „NVMe over Fibre Channel Details“.
+
+|===
+
+
+== Neue Funktionen in Version 11.51
+
+Diese Version enthält nur geringfügige Verbesserungen und Korrekturen.
+
+
+
+== Neue Funktionen in Version 11.50
+
+|===
+| Neues Feature | Beschreibung 
+
+
+ a| 
+NVMe over RoCE-Schnittstelle
+ a| 
+Für EF570 oder E5700 DE Series Controller kann jetzt eine NVMe-over-RoCE-Host-Verbindung bestellt werden. System Manager enthält neue Funktionen zum Konfigurieren der Netzwerkverbindung zum Host (verfügbar über die Hardware-Seite oder über das Menü:Einstellungen[System] sowie Funktionen zum Anzeigen von Daten über die NVMe-over-RoCE-Verbindungen zum Speicher-Array (über das Menü:Support[Support Center] oder über das Menü:Einstellungen[System] verfügbar.
+
+
+
+ a| 
+Manuelle Laufwerksauswahl für Volume-Gruppen
+ a| 
+Zusätzlich zur praktischen automatischen Auswahl steht eine neue Option zur Auswahl einzelner Laufwerke bei der Erstellung einer Volume-Gruppe zur Verfügung. Generell wird eine automatische Laufwerksauswahl empfohlen, die Option zur Auswahl einzelner Laufwerke ist jedoch für Umgebungen mit speziellen Anforderungen an die Laufwerksposition verfügbar.
+
+
+
+ a| 
+SANtricity Unified Manager
+ a| 
+Unified Manager ist eine separat installierte und browserbasierte Applikation, die Controller der E2800 Serie und E5700 Series erkennt und managt. Obwohl diese neue Applikation keine neue Funktion von System Manager ist, stellt sie ein neues Browser-basiertes Enterprise Framework bereit, das System Manager für erkannte Storage-Arrays starten kann. Der neue Unified Manager kann über den Bereich Support Software Downloads heruntergeladen werden.
+
+|===

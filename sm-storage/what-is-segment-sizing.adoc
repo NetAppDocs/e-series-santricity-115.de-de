@@ -1,0 +1,38 @@
+---
+permalink: sm-storage/what-is-segment-sizing.html 
+sidebar: sidebar 
+keywords: segment size 
+summary: 'Ein Segment ist die Datenmenge in Kilobyte (KiB), die auf einem Laufwerk gespeichert ist, bevor das Speicherarray auf das nächste Laufwerk im Stripe (RAID-Gruppe) verschoben wird. Die Segmentgröße gilt nur für Volume-Gruppen, nicht für Pools.' 
+---
+= Was ist Segmentgröße?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Segment ist die Datenmenge in Kilobyte (KiB), die auf einem Laufwerk gespeichert ist, bevor das Speicherarray auf das nächste Laufwerk im Stripe (RAID-Gruppe) verschoben wird. Die Segmentgröße gilt nur für Volume-Gruppen, nicht für Pools.
+
+Die Segmentgröße wird durch die Anzahl der enthaltenen Datenblöcke festgelegt. Beispiel:
+
+* 64 KiB-Segment = 128 Datenblöcke
+* 512 KiB-Segment = 1024 Datenblöcke
+
+
+Bei der Bestimmung der Segmentgröße müssen Sie wissen, welche Datentypen in einem Volume gespeichert werden sollen. Wenn eine Applikation typischerweise kleine zufällige Lese- und Schreibvorgänge (IOPS) verwendet, funktioniert ein kleineres Segment in der Regel besser. Wenn die Applikation über umfangreiche sequenzielle Lese- und Schreibvorgänge (Durchsatz) verfügt, sind große Segmente im Allgemeinen besser.
+
+Unabhängig davon, ob eine Applikation kleine zufällige Lese- und Schreibvorgänge oder große sequenzielle Lese- und Schreibvorgänge verwendet, liefert das Storage Array eine bessere Performance, wenn das Segment größer ist als die typische Größe der Datenblöcke. Üblicherweise erfolgen die Laufwerke einfacher und schneller auf die Daten, was für eine bessere Performance des Storage-Arrays wichtig ist.
+
+
+
+== In einer Umgebung, in der die IOPS-Performance wichtig ist
+
+In einer IOPS-Umgebung (I/O Operations per Second) ist das Storage Array besser, wenn Sie eine Segmentgröße verwenden, die größer ist als die typische Blockgröße („`Chunk`"), die auf ein Laufwerk geschrieben wird. So wird sichergestellt, dass jeder Block auf ein einziges Laufwerk geschrieben wird.
+
+
+
+== In einer Umgebung, in der der Durchsatz wichtig ist
+
+In einer Durchsatzumgebung sollte die Segmentgröße einen geraden Bruchteil der gesamten Laufwerke für Daten und eine typische Datenstückgröße (I/O-Größe) betragen. Dies verteilt die Daten als ein einziger Stripe über die Laufwerke der Volume-Gruppe, was zu schnelleren Lese- und Schreibvorgängen führt.
+
+Beispiel: In einer RAID 5-Volume-Gruppe mit 5 Laufwerken (4+1), wenn die typische Lese-/Schreibgröße „`Chunk`“ 2 MiB beträgt, ergibt sich eine Segmentgröße von 512 KiB (eine gleichmäßige Größe [1/4] der Gesamtstückgröße). Wäre die beste Wahl für die Volume-Segmentgröße der Applikation, da so sichergestellt wird, dass jeder Lese-/Schreibzugriff als ein einzelner Stripe für die Laufwerke der Volume-Gruppe geschrieben wird.

@@ -1,0 +1,81 @@
+---
+permalink: sm-settings/certificate-terminology.html 
+sidebar: sidebar 
+keywords: certificate, terminology 
+summary: Erfahren Sie, wie die Zertifikatsbedingungen auf Ihr Speicher-Array angewendet werden. 
+---
+= Terminologie des Zertifikats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erfahren Sie, wie die Zertifikatsbedingungen auf Ihr Speicher-Array angewendet werden.
+
+|===
+| Laufzeit | Beschreibung 
+
+
+ a| 
+CA
+ a| 
+Eine Zertifizierungsstelle (CA) ist eine vertrauenswürdige Einheit, die elektronische Dokumente, sogenannte digitale Zertifikate, für Internet-Sicherheit ausstellt. Diese Zertifikate identifizieren Website-Besitzer, die sichere Verbindungen zwischen Clients und Servern ermöglichen.
+
+
+
+ a| 
+CSR
+ a| 
+Eine Zertifikatsignierungsanforderung (CSR) ist eine Nachricht, die von einem Antragsteller an eine Zertifizierungsstelle (CA) gesendet wird. Der CSR überprüft die Informationen, die die Zertifizierungsstelle zum ausstellen eines Zertifikats benötigt.
+
+
+
+ a| 
+Zertifikat
+ a| 
+Ein Zertifikat identifiziert den Eigentümer einer Website aus Sicherheitsgründen, wodurch Angreifer die Identität der Website nicht mehr verkörpern können. Das Zertifikat enthält Informationen über den Websiteeigentümer und die Identität des vertrauenswürdigen Unternehmens, der diese Informationen bescheinigt (unterzeichnet).
+
+
+
+ a| 
+Client-Zertifikat
+ a| 
+Für das Management von Sicherheitsschlüssel validiert ein Client-Zertifikat die Controller des Speicherarrays, damit der Schlüsselverwaltungsserver ihre IP-Adressen anvertrauen kann.
+
+
+
+ a| 
+Zertifikat für Schlüsselmanagement-Server
+ a| 
+Für das Sicherheitsschlüsselmanagement validiert ein Zertifikat für den Schlüsselmanagement-Server den Server, damit das Storage-Array seiner IP-Adresse vertrauen kann.
+
+
+
+ a| 
+Managementzertifikat
+ a| 
+Ein Managementzertifikat wird von einer Zertifizierungsstelle (CA) genehmigt und ermöglicht einen sicheren Zugriff auf die Webanwendung. Auch als "signiertes Zertifikat" bezeichnet.
+
+
+
+ a| 
+OCSP-Server
+ a| 
+Der OCSP-Server (Online Certificate Status Protocol) ermittelt, ob die Zertifizierungsstelle vor ihrem geplanten Ablaufdatum Zertifikate widerrufen hat und blockiert dann den Zugriff des Benutzers auf einen Server, wenn das Zertifikat widerrufen wird.
+
+
+
+ a| 
+Selbstsigniertes Zertifikat
+ a| 
+Ein selbstsigniertes Zertifikat ist auf dem Controller vorinstalliert. Wenn die Site-Verbindung selbst signiert ist, wird eine Warnmeldung angezeigt, bevor Sie mit der Webanwendung fortfahren können.
+
+
+
+ a| 
+Vertrauenswürdiges Zertifikat
+ a| 
+Ein vertrauenswürdiges Zertifikat einer Zertifizierungsstelle (CA) ist ein bekanntes Zertifikat oben in der Zertifikathierarchie. Auch als „Stammzertifikat“ bezeichnet.
+
+|===

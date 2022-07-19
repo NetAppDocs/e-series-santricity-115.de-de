@@ -1,0 +1,86 @@
+---
+permalink: sm-storage/change-configuration-settings-for-a-volume-group.html 
+sidebar: sidebar 
+keywords: change, raid level, volume group 
+summary: Sie können das RAID-Level für eine Volume-Gruppe ändern, um die Performance-Anforderungen der Applikationen zu erfüllen, die auf die Volume-Gruppe zugreifen. Durch diesen Vorgang wird das RAID-Level einer Volume-Gruppe ohne Beeinträchtigung der Daten-I/O geändert 
+---
+= Ändern Sie den RAID-Level für eine Volume-Gruppe
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das RAID-Level für eine Volume-Gruppe ändern, um die Performance-Anforderungen der Applikationen zu erfüllen, die auf die Volume-Gruppe zugreifen. Mit diesem Vorgang wird das RAID-Level einer Volume-Gruppe geändert, ohne dass der Daten-I/O beeinträchtigt wird
+
+.Bevor Sie beginnen
+* Die Volume-Gruppe muss den optimalen Status haben.
+* Sie müssen über genügend Kapazität in der Volume-Gruppe verfügen, um auf das neue RAID-Level zu konvertieren.
+* Sie können den RAID-Level eines Pools nicht ändern. System Manager konfiguriert Pools automatisch als RAID 6.
+
+
+Sie können diesen Vorgang nach dem Start nicht mehr abbrechen. Während dieses Vorgangs bleiben die Daten verfügbar.
+
+Weitere Informationen zu RAID-Leveln
+
+[cols="2*"]
+|===
+| RAID-Level | Beschreibung 
+
+
+ a| 
+RAID 0 Striping
+ a| 
+Bietet hohe Performance, bietet jedoch keine Datenredundanz. Wenn ein einzelnes Laufwerk in der Volume-Gruppe ausfällt, fallen alle zugehörigen Volumes aus und alle Daten gehen verloren.
+
+Eine Striping-RAID-Gruppe fasst zwei oder mehr Laufwerke zu einem großen logischen Laufwerk zusammen.
+
+
+
+ a| 
+RAID 1-Spiegelung
+ a| 
+Bietet hohe Performance und beste Datenverfügbarkeit und eignet sich zum Speichern sensibler Daten auf Unternehmens- oder Privatebene.
+
+Schützt Ihre Daten, indem der Inhalt eines Laufwerks automatisch auf das zweite Laufwerk im gespiegelten Paar gespiegelt wird. Er bietet Schutz bei Ausfall eines einzigen Laufwerks.
+
+
+
+ a| 
+RAID 10 Striping/Spiegelung
+ a| 
+Bietet eine Kombination aus RAID 0 (Striping) und RAID 1 (Spiegelung) und wird erreicht, wenn vier oder mehr Laufwerke ausgewählt werden.
+
+RAID 10 ist für Transaktionsapplikationen mit hohem Volumen, z. B. für eine Datenbank mit hohen Performance- und Fehlertoleranz, geeignet.
+
+
+
+ a| 
+RAID 5
+ a| 
+Optimal für Umgebungen mit mehreren Benutzern (wie Datenbank- oder Filesystem-Storage) mit einer typischen I/O-Größe und einem hohen Anteil an Leseaktivitäten.
+
+
+
+ a| 
+RAID 6
+ a| 
+Optimal für Umgebungen, die einen Redundanzschutz über RAID 5 hinaus benötigen, jedoch keine hohe Schreib-Performance erfordern.
+
+|===
+RAID 3 kann nur Volume-Gruppen über die Befehlszeilenschnittstelle (CLI) zugewiesen werden.
+
+.Schritte
+. Wählen Sie *menu:Speicher[Pools & Volume Groups]*.
+. Wählen Sie die Volume-Gruppe aus, die Sie bearbeiten möchten, und klicken Sie dann auf *Einstellungen anzeigen/bearbeiten*.
++
+Das Dialogfeld Einstellungen für Volume-Gruppe wird angezeigt.
+
+. Wählen Sie den RAID-Level aus der Dropdown-Liste aus, und klicken Sie dann auf *Speichern*.
++
+Wenn die Kapazität reduziert wird, die Volume-Redundanz verloren geht oder der Schutz vor Shelf-/Schubladenverlust infolge einer Änderung auf RAID-Ebene verloren geht, wird ein Bestätigungsdialogfeld mit dem Kunden angezeigt. Wählen Sie *Ja*, um fortzufahren. Klicken Sie andernfalls auf *Nein*.
+
+
+
+Wenn Sie das RAID-Level für eine Volume-Gruppe ändern, ändert System Manager die RAID-Level jedes Volumes, das die Volume-Gruppe enthält. Die Leistung kann während des Betriebs leicht beeinträchtigt werden.

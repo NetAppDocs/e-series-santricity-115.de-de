@@ -1,0 +1,14 @@
+---
+permalink: sm-support/view-the-different-types-of-iscsi-statistics.html 
+sidebar: sidebar 
+keywords: view, different types, iscsi, statistics 
+summary: 'Sie können verschiedene Statistikgruppen entweder als RAW- oder Baseline-Statistiken überprüfen: Ethernet MAC-Statistiken, Ethernet TCP/IP-Statistiken, Target (Protokoll)-Statistiken, Local Initiator (Protokoll)-Statistiken, DCBX-Statistiken zum Betriebszustand, LLDP-TLV-Statistiken und DCBX-TLV-Statistiken.' 
+---
+= Zeigen Sie die verschiedenen Typen von iSCSI-Statistiken an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können verschiedene Statistikgruppen entweder als RAW- oder Baseline-Statistiken überprüfen: Ethernet MAC-Statistiken, Ethernet TCP/IP-Statistiken, Target (Protokoll)-Statistiken, Local Initiator (Protokoll)-Statistiken, DCBX-Statistiken zum Betriebszustand, LLDP-TLV-Statistiken und DCBX-TLV-Statistiken.

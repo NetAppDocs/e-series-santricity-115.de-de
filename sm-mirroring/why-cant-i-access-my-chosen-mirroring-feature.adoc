@@ -1,0 +1,24 @@
+---
+permalink: sm-mirroring/why-cant-i-access-my-chosen-mirroring-feature.html 
+sidebar: sidebar 
+keywords: access, mirror, feature 
+summary: Um entweder die Funktion Asynchronous Mirroring oder die Funktion Synchronous Mirroring verwenden zu können, muss der SANtricity Unified Manager auf Ihrem lokalen Host über eine HTTPS-Verbindung ausgeführt werden, um die spiegelfähigen Storage-Arrays zu erkennen und den Spiegelungsvorgang zu starten. In Unified Manager müssen Sie das SANtricity-Array auswählen, aus dem Sie Daten spiegeln möchten, und klicken Sie dann auf Starten, um den System Manager zu öffnen. 
+---
+= Warum kann ich nicht auf meine gewählte Spiegelfunktion zugreifen?
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um entweder die Funktion Asynchronous Mirroring oder die Funktion Synchronous Mirroring verwenden zu können, muss der SANtricity Unified Manager auf Ihrem lokalen Host über eine HTTPS-Verbindung ausgeführt werden, um die spiegelfähigen Storage-Arrays zu erkennen und den Spiegelungsvorgang zu starten. In Unified Manager müssen Sie das SANtricity-Array auswählen, aus dem Sie Daten spiegeln möchten, und klicken Sie dann auf Starten, um den System Manager zu öffnen.
+
+Um die Spiegelungsfunktion zu verwenden, überprüfen Sie Folgendes:
+
+* Der Web Services Proxy-Dienst wird ausgeführt.
+* Der SANtricity Unified Manager wird auf Ihrem lokalen Host über eine HTTPS-Verbindung ausgeführt.
+* SANtricity Unified Manager zeigt gültige SSL-Zertifikate für das Storage-Array an. Sie können ein selbstsigniertes Zertifikat akzeptieren oder Ihr eigenes Sicherheitszertifikat mit Unified Manager installieren und zum Menü:Zertifikat[Zertifikatverwaltung] navigieren.
+* SANtricity System Manager wird über einen Unified Manager gestartet.
+* Sie müssen die beiden Speicher-Arrays entdeckt haben, zwischen denen Daten gespiegelt werden sollen. Dann wählen Sie im Unified Manager das Speicherarray des primären Volumes aus und klicken Sie auf *Start*, um den browserbasierten SANtricity-System-Manager zu öffnen.
+

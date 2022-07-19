@@ -1,0 +1,24 @@
+---
+permalink: sm-hardware/what-should-i-do-after-configuring-the-management-ports.html 
+sidebar: sidebar 
+keywords: configure, management, ports 
+summary: Wenn Sie die IP-Adresse für das Speicher-Array geändert haben, möchten Sie möglicherweise die Ansicht des globalen Arrays in SANtricity Unified Manager aktualisieren. 
+---
+= Was soll ich nach dem Konfigurieren der Management-Ports tun?
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die IP-Adresse für das Speicher-Array geändert haben, möchten Sie möglicherweise die Ansicht des globalen Arrays in SANtricity Unified Manager aktualisieren.
+
+Um die Ansicht des globalen Arrays in Unified Manager zu aktualisieren, öffnen Sie die Schnittstelle und gehen Sie zum Menü:Verwalten[Entdecken].
+
+Wenn Sie auch den SANtricity-Speicher-Manager für das globale Array-Management verwenden, gehen Sie zum Enterprise Management-Fenster (EMW) und fügen Sie das Speicher-Array erneut in die EMW-Liste ein:
+
+. Suchen Sie das Array in der EMW-Liste der Speicher-Arrays.
+. Entfernen Sie das Array aus der Liste.
+. Fügen Sie das Speicherarray mithilfe der neuen IP-Adresse erneut zur EMW-Liste hinzu.
+

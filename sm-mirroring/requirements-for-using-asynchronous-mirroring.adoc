@@ -1,0 +1,77 @@
+---
+permalink: sm-mirroring/requirements-for-using-asynchronous-mirroring.html 
+sidebar: sidebar 
+keywords: requirements, use, asynchronous, mirroring 
+summary: Wenn Sie die Funktion zum asynchronen Spiegeln verwenden möchten, sollten Sie die folgenden Anforderungen beachten. 
+---
+= Anforderungen für die Verwendung von asynchronem Spiegeln
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die Funktion zum asynchronen Spiegeln verwenden möchten, sollten Sie die folgenden Anforderungen beachten.
+
+
+
+== SANtricity Unified Manager
+
+Um die asynchrone Spiegelung zu verwenden, müssen die folgenden Bedingungen eingerichtet werden:
+
+* Der Web Services Proxy-Dienst wird ausgeführt.
+* Der SANtricity Unified Manager wird auf Ihrem lokalen Host über eine HTTPS-Verbindung ausgeführt.
+* Jeder Controller im primären Array und im sekundären Array muss über einen konfigurierten Ethernet-Managementport verfügen und mit dem Netzwerk verbunden sein.
+* SANtricity Unified Manager zeigt gültige SSL-Zertifikate für das Storage-Array an. Sie können ein selbstsigniertes Zertifikat akzeptieren oder Ihr eigenes Sicherheitszertifikat mit Unified Manager installieren und zum Menü:Zertifikat[Zertifikatverwaltung] navigieren.
+* SANtricity System Manager wird über einen Unified Manager gestartet.
+* Sie müssen die beiden Speicher-Arrays entdeckt haben, zwischen denen Daten gespiegelt werden sollen. Dann wählen Sie im Unified Manager das Speicherarray des primären Volumes aus und klicken Sie auf *Start*, um den browserbasierten SANtricity-System-Manager zu öffnen.
+
+
+
+
+== Storage-Arrays durchführt
+
+* Sie müssen über zwei Storage-Arrays verfügen.
+* Jeder Controller im primären Array und im sekundären Array muss über einen konfigurierten Ethernet-Managementport verfügen und mit dem Netzwerk verbunden sein.
+* Jedes Speicher-Array muss zwei Controller haben.
+* Auf den Speicher-Arrays der primären und sekundären Volumes können unterschiedliche Betriebssystemversionen ausgeführt werden. Die unterstützte Mindestversion ist 7.84.
+* Sie müssen das Passwort für die lokalen und Remote-Speicher-Arrays kennen.
+* Sie benötigen genügend freie Kapazität auf dem Remote-Speicher-Array, um ein sekundäres Volume zu erstellen, das dem primären Volume entspricht oder dessen Größe Sie spiegeln möchten.
+* Ihre lokalen und Remote-Speicher-Arrays müssen über eine Fibre Channel Fabric- oder iSCSI-Schnittstelle verbunden sein.
+
+
+
+
+== Unterstützte Hardwarekonfigurationen und Konnektivitätsanforderungen
+
+* Asynchrones Spiegeln wird nur in Hardware-Konfigurationen mit Dual Controller unterstützt.
+* Die Kommunikation mit der Funktion Asynchronous Mirroring wird nur bei Controllern mit Fibre Channel (FC)- oder iSCSI-Host-Ports unterstützt. Die Funktion verwendet einen der Host Ports an jedem Controller sowohl auf dem lokalen Speicher-Array als auch auf dem Remote-Speicher-Array.
+* Wenn Storage Arrays sowohl mit FC-Verbindungen als auch mit iSCSI-Verbindungen verbunden werden, kann eine asynchrone Spiegelgruppe über FC gespiegelt werden, und eine andere asynchrone Spiegelgruppe kann über iSCSI gespiegelt werden.
+
+
+
+
+== Kandidaten für gespiegelte Volumes
+
+* RAID-Level, Caching-Parameter und Segmentgröße können auf den primären und sekundären Volumes eines asynchronen gespiegelten Paars unterschiedlich sein.
+* Das sekundäre Volume muss mindestens so groß sein wie das primäre Volume.
+* Ein Volume kann nur an einer Spiegelbeziehung beteiligt sein.
+
+
+
+
+== Reservierte Kapazität
+
+* Ein reserviertes Kapazitäts-Volume ist für ein primäres Volume und ein sekundäres Volume in einem gespiegelten Paar für das Protokollieren von Schreibinformationen erforderlich, um nach einem Controller-Reset und anderen temporären Unterbrechungen wiederherzustellen.
+* Da sowohl das primäre Volume als auch das sekundäre Volume in einem gespiegelten Paar zusätzliche reservierte Kapazität benötigen, müssen Sie sicherstellen, dass auf beiden Storage-Arrays in der Spiegelbeziehung freie Kapazität verfügbar ist.
+
+
+
+
+== Laufwerkssicherheit
+
+* Wenn Sie sichere Laufwerke verwenden, müssen das primäre und das sekundäre Volume über kompatible Sicherheitseinstellungen verfügen. Diese Beschränkung wird nicht durchgesetzt, deshalb müssen Sie sie selbst überprüfen.
+* Bei Verwendung von sicheren Laufwerken sollten das primäre Volume und das sekundäre Volume denselben Laufwerkstyp verwenden. Diese Beschränkung wird nicht durchgesetzt, deshalb müssen Sie sie selbst überprüfen.
+* Wenn Sie Data Assurance (da) verwenden, müssen das primäre Volume und das sekundäre Volume über dieselben da-Einstellungen verfügen.
+

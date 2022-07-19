@@ -1,0 +1,18 @@
+---
+permalink: sm-settings/how-do-i-know-what-certificates-need-to-be-uploaded-to-system-manager.html 
+sidebar: sidebar 
+keywords: how, what, know, certificates, need, uploaded, system manager 
+summary: Für das externe Verschlüsselungsmanagement importieren Sie zwei Arten von Zertifikaten zur Authentifizierung zwischen dem Storage-Array und dem Schlüsselverwaltungsserver, damit sich die beiden Entitäten gegenseitig vertrauen können. 
+---
+= Wie weiß ich, welche Zertifikate müssen in System Manager hochgeladen werden?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für das externe Verschlüsselungsmanagement importieren Sie zwei Arten von Zertifikaten zur Authentifizierung zwischen dem Storage-Array und dem Schlüsselverwaltungsserver, damit sich die beiden Entitäten gegenseitig vertrauen können.
+
+Ein Client-Zertifikat validiert die Controller des Speicherarrays, damit der Schlüsselverwaltungsserver ihren IP-Adressen vertrauen kann. Um ein Client-Zertifikat zu erhalten, müssen Sie eine CSR für das Speicher-Array ausfüllen und es anschließend auf den Schlüsselverwaltungsserver hochladen. Generieren Sie vom Server ein Clientzertifikat, und importieren Sie es dann mit System Manager.
+
+Ein Zertifikat für den Schlüsselmanagementserver validiert den Schlüsselmanagementserver, damit das Storage-Array seiner IP-Adresse vertrauen kann. Um ein Zertifikat für den Schlüsselverwaltungsserver zu erhalten, müssen Sie es vom Schlüsselverwaltungsserver generieren.

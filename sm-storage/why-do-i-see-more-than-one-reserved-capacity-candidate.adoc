@@ -1,0 +1,16 @@
+---
+permalink: sm-storage/why-do-i-see-more-than-one-reserved-capacity-candidate.html 
+sidebar: sidebar 
+keywords: reserved capacity, candidate 
+summary: Für Sie wird mehr als ein Kandidat für reservierte Kapazität angezeigt, wenn System Manager mehr als ein Volume in einem Pool oder einer Volume-Gruppe erkennt, der der für das Storage-Objekt ausgewählten Kapazitätsprozentzahl entspricht. 
+---
+= Warum kann ich mehr als einen Kandidaten für reservierte Kapazität sehen?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für Sie wird mehr als ein Kandidat für reservierte Kapazität angezeigt, wenn System Manager mehr als ein Volume in einem Pool oder einer Volume-Gruppe erkennt, der der für das Storage-Objekt ausgewählten Kapazitätsprozentzahl entspricht.
+
+Sie können die Liste der empfohlenen Kandidaten aktualisieren, indem Sie den Prozentsatz des physischen Speicherplatzes, den Sie im Basis-Volume für Kopiervorgänge reservieren möchten, ändern. Basierend auf Ihrer Auswahl werden im System Manager die Kandidaten mit der am besten reservierten Kapazität angezeigt.

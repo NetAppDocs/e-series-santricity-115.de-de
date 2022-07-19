@@ -1,0 +1,31 @@
+---
+permalink: sm-settings/delete-alert-email-addresses.html 
+sidebar: sidebar 
+keywords: delete, email, addresses, alerts 
+summary: Sie können die E-Mail-Adressen der Empfänger löschen, die E-Mail-Benachrichtigungen erhalten. 
+---
+= Löschen von E-Mail-Adressen für Meldungen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die E-Mail-Adressen der Empfänger löschen, die E-Mail-Benachrichtigungen erhalten.
+
+.Schritte
+. Wählen Sie Menü:Einstellungen[Alarme].
+. Wählen Sie die Registerkarte *E-Mail* aus.
+. Wählen Sie in der Tabelle *E-Mail-Adresse* die E-Mail-Adresse aus, die Sie löschen möchten.
++
+Die Schaltfläche *Löschen* oben rechts in der Tabelle steht zur Auswahl.
+
+. Klicken Sie Auf *Löschen*.
++
+Das Dialogfeld *E-Mail löschen bestätigen* wird geöffnet.
+
+. Bestätigen Sie den Vorgang, und klicken Sie dann auf *Löschen*.
+
+
+Warnmeldungen werden nicht mehr an diese E-Mail-Adresse gesendet.
