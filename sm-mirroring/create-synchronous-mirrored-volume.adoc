@@ -24,11 +24,12 @@ Ein Volume wird synchron gespiegelt, um Daten in Echtzeit zwischen den Storage-A
 * Sie müssen sowohl die primären als auch die sekundären Volumes erstellt haben, die Sie in der Beziehung zur synchronen Spiegelung verwenden möchten.
 
 
+.Über diese Aufgabe
 Der Prozess, ein Volume synchron zu spiegeln, ist ein mehrstufiges Verfahren:
 
-*  1: Select the primary volume
-*  2: Select the secondary volume
-*  3: Select synchronization settings
+* <<Schritt 1: Wählen Sie das primäre Volumen>>
+* <<Schritt 2: Wählen Sie das sekundäre Volumen>>
+* <<Schritt 3: Synchronisierungseinstellungen auswählen>>
 
 
 Ein Volume kann nur an einer Spiegelbeziehung beteiligt sein.
@@ -59,7 +60,7 @@ Sie müssen das primäre Volume auswählen, das Sie in der Beziehung zur synchro
 Wenn ein Volume in der Kachel Volumes ausgewählt wurde und ausgewählt werden kann, wird es standardmäßig ausgewählt.
 
 ====
-. Wählen Sie *Weiter* und gehen Sie zu  2: Select the secondary volume.
+. Wählen Sie *Weiter* und gehen Sie zu <<Schritt 2: Wählen Sie das sekundäre Volumen>>.
 
 
 
@@ -75,6 +76,7 @@ Sie müssen das sekundäre Volumen auswählen, das Sie in der Spiegelbeziehung v
 * Das sekundäre Volume muss mindestens so groß sein wie das primäre Volume.
 
 
+.Über diese Aufgabe
 Wenn Sie ein sekundäres Volume auf dem Remote-Speicher-Array auswählen, zeigt das System eine Liste aller berechtigten Volumes für dieses gespiegelte Paar an. Alle Volumes, die nicht für die Verwendung geeignet sind, werden in dieser Liste nicht angezeigt.
 
 Die in diesem Dialogfeld angezeigten Volumes werden nach der Kapazität sortiert. Dabei beginnt das Volume, das der Kapazität der primären Volume-Kapazität am nächsten ist. Volumes mit identischen Kapazitäten werden alphabetisch sortiert.
@@ -99,7 +101,7 @@ Wenn Ihr Remote-Speicher-Array passwortgeschützt ist, fordert das System zur Ei
 Wird ein sekundäres Volume mit einer Kapazität ausgewählt, die größer als das primäre Volume ist, so ist die nutzbare Kapazität auf die Größe des primären Volumes beschränkt.
 
 ====
-. Klicken Sie auf *Weiter* und gehen Sie zu  3: Select synchronization settings.
+. Klicken Sie auf *Weiter* und gehen Sie zu <<Schritt 3: Synchronisierungseinstellungen auswählen>>.
 
 
 
@@ -119,6 +121,7 @@ Die in diesem Dialogfeld festgelegte Priorität gilt sowohl für das primäre Vo
 
 +
 .Mehr zu Synchronisierungsraten
+[%collapsible]
 ====
 Es gibt fünf Prioritätsraten für die Synchronisierung:
 
@@ -139,6 +142,7 @@ Es gibt fünf Prioritätsraten für die Synchronisierung:
 . Klicken Sie auf *Fertig stellen*, um die Synchronspiegelung abzuschließen.
 
 
+.Ergebnisse
 System Manager führt die folgenden Aktionen durch:
 
 * Aktiviert die Funktion Synchronous Mirroring.
@@ -146,4 +150,5 @@ System Manager führt die folgenden Aktionen durch:
 * Legt die Synchronisierungspriorität und die Resynchronisierungsrichtlinie fest.
 
 
+.Nachdem Sie fertig sind
 Wählen Sie MENU:Home[Anzeigen von Vorgängen in Arbeit], um den Fortschritt der synchronen Spiegelung anzuzeigen. Dieser Vorgang kann langwierig sein und die System-Performance beeinträchtigen.

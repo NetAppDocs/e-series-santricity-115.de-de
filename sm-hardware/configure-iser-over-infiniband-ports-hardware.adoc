@@ -19,6 +19,7 @@ Wenn der Controller einen iSER-over-InfiniBand-Port enthält, können Sie die Ne
 * Sie müssen die IP-Adresse der Hostverbindung kennen.
 
 
+.Über diese Aufgabe
 Sie können über die Seite *Hardware* oder über Menü:Einstellungen[System] auf die Konfiguration iSER-over-InfiniBand zugreifen. Diese Aufgabe beschreibt die Konfiguration der Ports auf der Seite *Hardware*.
 
 [NOTE]

@@ -20,6 +20,7 @@ Sie können das RAID-Level für eine Volume-Gruppe ändern, um die Performance-A
 * Sie können den RAID-Level eines Pools nicht ändern. System Manager konfiguriert Pools automatisch als RAID 6.
 
 
+.Über diese Aufgabe
 Sie können diesen Vorgang nach dem Start nicht mehr abbrechen. Während dieses Vorgangs bleiben die Daten verfügbar.
 
 Weitere Informationen zu RAID-Leveln
@@ -83,4 +84,5 @@ Wenn die Kapazität reduziert wird, die Volume-Redundanz verloren geht oder der 
 
 
 
+.Ergebnisse
 Wenn Sie das RAID-Level für eine Volume-Gruppe ändern, ändert System Manager die RAID-Level jedes Volumes, das die Volume-Gruppe enthält. Die Leistung kann während des Betriebs leicht beeinträchtigt werden.

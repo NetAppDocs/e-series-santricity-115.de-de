@@ -28,4 +28,5 @@ Das Dialogfeld *E-Mail löschen bestätigen* wird geöffnet.
 . Bestätigen Sie den Vorgang, und klicken Sie dann auf *Löschen*.
 
 
+.Ergebnis
 Warnmeldungen werden nicht mehr an diese E-Mail-Adresse gesendet.

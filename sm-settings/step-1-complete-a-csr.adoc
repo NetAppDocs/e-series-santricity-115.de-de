@@ -18,6 +18,7 @@ Um ein Zertifikat der Zertifizierungsstelle (Certificate Authority, CA) für die
 * Sie müssen mit einem Benutzerprofil angemeldet sein, das Sicherheitsadministratorberechtigungen enthält. Andernfalls werden keine Zertifikatfunktionen angezeigt.
 
 
+.Über diese Aufgabe
 In dieser Aufgabe wird beschrieben, wie Sie die CSR-Dateien (Certificate Signing Requests) generieren, die Sie an eine CA senden, um signierte Managementzertifikate für die Controller zu erhalten. Sie müssen Informationen über Ihr Unternehmen, die IP-Adresse oder den DNS-Namen der Controller angeben. Während dieser Aufgabe wird eine CSR-Datei erzeugt, wenn es nur einen Controller im Speicher-Array und zwei .CSR-Dateien gibt, wenn es zwei Controller gibt.
 
 .Schritte
@@ -64,4 +65,5 @@ Für einen einzelnen Controller wird eine .CSR-Datei auf Ihr lokales System heru
 . Senden Sie die .CSR-Datei(en) an Ihre CA.
 
 
+.Nachdem Sie fertig sind
 Wenn Sie die digitalen Zertifikate erhalten, importieren Sie die entsprechenden Zertifikatdateien, die die CA an Sie gesendet hat.

@@ -24,6 +24,7 @@ Sie können alle vom Benutzer importierten Zertifikate löschen.
 Möglicherweise verlieren Sie den Zugriff auf das System, wenn Sie ein Zertifikat löschen, das zur Authentifizierung der Managementzertifikate oder des LDAP-Servers des Speicherarrays verwendet wird, bevor Sie ein Ersatzzertifikat importieren.
 
 ====
+.Über diese Aufgabe
 Diese Aufgabe beschreibt das Löschen von vom Benutzer importierten Zertifikaten. Vordefinierte Zertifikate können nicht gelöscht werden.
 
 .Schritte

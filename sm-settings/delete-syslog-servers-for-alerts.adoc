@@ -24,4 +24,5 @@ Das Dialogfeld *Löschen Syslog Server* bestätigen wird geöffnet.
 . Bestätigen Sie den Vorgang, und klicken Sie dann auf *Löschen*.
 
 
+.Ergebnis
 Der entfernte Server empfängt keine Warnmeldungen mehr von der Ereignisüberwachung.

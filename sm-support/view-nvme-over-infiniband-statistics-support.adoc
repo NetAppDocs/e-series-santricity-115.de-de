@@ -14,6 +14,7 @@ summary: Daten zu den NVMe-over-InfiniBand-Verbindungen können mit dem Storage-
 [role="lead"]
 Daten zu den NVMe-over-InfiniBand-Verbindungen können mit dem Storage-Array angezeigt werden.
 
+.Über diese Aufgabe
 System Manager zeigt diese NVMe-over-InfiniBand-Statistiken. Alle Statistiken sind schreibgeschützt und können nicht festgelegt werden.
 
 * *NVMe-Controller-Statistiken* -- liefert Statistiken für den NVMe-Controller, einschließlich Timeouts und Verbindungsfehlern.

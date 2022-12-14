@@ -14,6 +14,7 @@ summary: 'Sie können die Legacy-Managementoberfläche (Symbol) aktivieren oder 
 [role="lead"]
 Sie können die Legacy-Managementoberfläche (Symbol) aktivieren oder deaktivieren, eine Kommunikationsmethode zwischen dem Storage-Array und dem Management-Client. Standardmäßig ist die ältere Managementoberfläche auf aktiviert. Wenn die Funktion deaktiviert wird, verwendet das Storage-Array und der Management-Client eine sicherere Kommunikationsmethode (REST-API über HTTPS). Bestimmte Tools und Aufgaben können jedoch beeinträchtigt werden, wenn die Übertragung deaktiviert ist.
 
+.Über diese Aufgabe
 Die Einstellung wirkt sich auf die Vorgänge wie folgt aus:
 
 * *Ein* (Standard) -- erforderliche Einstellung für Spiegelung, für CLI-Befehle, die nur auf E5700 und E5600 Storage-Arrays betrieben werden, sowie einige andere Tools wie das QuickConnect Utility und der OCI-Adapter.

@@ -21,6 +21,7 @@ Nachdem Sie digitale Zertifikate von einer Zertifizierungsstelle (CA) erhalten h
 * Die Zertifikatdateien werden auf Ihrem lokalen System installiert.
 
 
+.Über diese Aufgabe
 In dieser Aufgabe wird beschrieben, wie Sie die vertrauenswürdigen Zertifikate für die Controller des Speicherarrays hochladen.
 
 .Schritte
@@ -36,6 +37,8 @@ Die Dateinamen werden im Dialogfeld angezeigt.
 . Klicken Sie Auf *Import*.
 
 
+.Ergebnisse
 Die Dateien werden hochgeladen und validiert.
 
+.Nachdem Sie fertig sind
 Importieren Sie das Managementzertifikat.

@@ -19,6 +19,7 @@ Sie können die Managementzertifikate auf dem Speicher-Array wieder in den werks
 * Zertifikate müssen bereits importiert werden.
 
 
+.Über diese Aufgabe
 Durch das Zurücksetzen der Managementzertifikate auf dem Speicher-Array werden die aktuellen Managementzertifikate von jedem der Controller gelöscht. Nach dem Zurücksetzen der Zertifikate werden die Controller mit selbstsignierten Zertifikaten zurückgesetzt.
 
 .Schritte
@@ -30,4 +31,5 @@ Das Dialogfeld „Management-Zertifikate zurücksetzen bestätigen*“ wird geö
 . Typ `reset` Klicken Sie im Feld auf *Zurücksetzen*.
 
 
+.Ergebnisse
 Nach der Aktualisierung des Browsers werden die Controller mithilfe von selbstsignierten Zertifikaten wiederhergestellt. Das System fordert Benutzer daher auf, das selbstsignierte Zertifikat für ihre Sitzungen manuell anzunehmen.

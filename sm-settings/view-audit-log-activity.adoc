@@ -36,6 +36,7 @@ Durch die Anzeige von Prüfprotokollen können Benutzer mit Sicherheitsadministr
 . Verwenden Sie die Auswahl auf der Seite „Überwachungsprotokoll“, um Ereignisse anzuzeigen und zu verwalten.
 +
 .Auswahldetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

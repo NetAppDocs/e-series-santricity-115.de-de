@@ -19,6 +19,7 @@ Wenn Ihr Controller eine iSCSI-Hostverbindung enthält, können Sie die iSCSI-Po
 * Sie müssen die Netzwerkgeschwindigkeit (die Datenübertragungsrate zwischen den Ports und dem Host) kennen.
 
 
+.Über diese Aufgabe
 Dieser Task beschreibt den Zugriff auf die Konfiguration des iSCSI-Ports über die Seite Hardware. Sie können die Konfiguration auch über die Systemseite aufrufen (Menü:Einstellungen[System]).
 
 [NOTE]
@@ -53,6 +54,7 @@ Um alle Porteinstellungen anzuzeigen, klicken Sie rechts im Dialogfeld auf den L
 
 +
 .Felddetails
+[%collapsible]
 ====
 |===
 | Port-Einstellung | Beschreibung 
@@ -96,6 +98,7 @@ Wenn Sie IPv4 aktivieren ausgewählt haben, wird ein Dialogfeld zum Auswählen v
 . Konfigurieren Sie die IPv4- und/oder IPv6-Einstellungen automatisch oder manuell. Um alle Porteinstellungen anzuzeigen, klicken Sie rechts im Dialogfeld auf den Link *Weitere Einstellungen anzeigen*.
 +
 .Felddetails
+[%collapsible]
 ====
 |===
 | Port-Einstellung | Beschreibung 

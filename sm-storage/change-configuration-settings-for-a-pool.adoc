@@ -23,6 +23,7 @@ Das Dialogfeld *Pool-Einstellungen* wird angezeigt.
 . Wählen Sie die Registerkarte *Einstellungen* aus, und bearbeiten Sie anschließend die Pooleinstellungen entsprechend.
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="2*"]
 |===

@@ -18,6 +18,7 @@ Um ein Zertifikat für eine Zertifizierungsstelle (Certificate Authority, CA) f�
 * Sie müssen mit einem Benutzerprofil angemeldet sein, das Sicherheitsadministratorberechtigungen enthält. Andernfalls werden keine Zertifikatfunktionen angezeigt.
 
 
+.Über diese Aufgabe
 In dieser Aufgabe wird beschrieben, wie Sie die CSR-Dateien (Certificate Signing Requests) generieren, die Sie an eine CA senden, um signierte Zertifikate für einen Schlüsselverwaltungsserver zu erhalten. Während dieser Aufgabe müssen Sie Informationen über Ihr Unternehmen angeben.
 
 .Schritte
@@ -40,4 +41,5 @@ Eine .CSR-Datei wird auf Ihrem lokalen System gespeichert.
 . Senden Sie die .CSR-Datei(en) an Ihre CA.
 
 
+.Nachdem Sie fertig sind
 Wenn Sie die Client- und Serverzertifikate vom Schlüsselverwaltungsserver beziehen, importieren Sie diese zur Authentifizierung mit den Speicher-Array-Controllern.

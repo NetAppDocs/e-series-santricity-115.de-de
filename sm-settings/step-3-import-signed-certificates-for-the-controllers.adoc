@@ -21,6 +21,7 @@ Nach dem Import der vertrauenswürdigen Zertifikatskette importieren Sie für je
 * Die Managementzertifikatdatei(en) stehen auf Ihrem lokalen System zur Verfügung.
 
 
+.Über diese Aufgabe
 In dieser Aufgabe wird beschrieben, wie Sie die Management-Zertifikatdateien für die Controller-Authentifizierung hochladen.
 
 .Schritte
@@ -39,4 +40,5 @@ Die Datei(en) werden hochgeladen und validiert.
 
 
 
+.Ergebnisse
 Die Sitzung wird automatisch beendet. Sie müssen sich erneut anmelden, damit die Zertifikate wirksam werden. Wenn Sie sich erneut anmelden, wird das neue CA-signierte Zertifikat für Ihre Sitzung verwendet.

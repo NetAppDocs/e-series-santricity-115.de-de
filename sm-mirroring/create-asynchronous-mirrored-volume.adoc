@@ -29,11 +29,12 @@ Sie spiegeln ein Volume asynchron, um Daten im Remote-Storage-Array als zeitpunk
 * Ihre lokalen und Remote-Speicher-Arrays müssen über eine Fibre Channel Fabric- oder iSCSI-Schnittstelle verbunden sein.
 
 
+.Über diese Aufgabe
 Der Prozess zur asynchronen Spiegelung eines Volumes besteht aus mehreren Schritten:
 
-*  1: Create a mirror consistency group or select an existing one
-*  2: Select the primary volume
-*  3: Select the secondary volume
+* <<Schritt 1: Erstellen Sie eine gespiegelte Konsistenzgruppe oder wählen Sie eine vorhandene>>
+* <<Schritt 2: Wählen Sie das primäre Volumen>>
+* <<Schritt 3: Wählen Sie das sekundäre Volumen>>
 
 
 Ein Volume kann nur an einer Spiegelbeziehung beteiligt sein.
@@ -45,6 +46,7 @@ Ein Volume kann nur an einer Spiegelbeziehung beteiligt sein.
 [role="lead"]
 Sie erstellen eine SpiegelungsConsistency Group oder wählen eine vorhandene aus, um die Spiegelbeziehung zwischen dem lokalen Speicher-Array und dem Remote-Speicher-Array herzustellen.
 
+.Über diese Aufgabe
 Die Anzahl der Mirror-Consistency-Group-Beziehungen und gespiegelten Paar-Beziehungen, die Sie erstellen können, hängt von der Hardware in Ihrem Speicher-Array ab.
 
 .Schritte
@@ -85,7 +87,7 @@ Wenn System Manager die SpiegelungsConsistency Group erfolgreich auf dem lokalen
 ====
 
 
-. Wählen Sie *Weiter* und gehen Sie zu  2: Select the primary volume.
+. Wählen Sie *Weiter* und gehen Sie zu <<Schritt 2: Wählen Sie das primäre Volumen>>.
 
 
 
@@ -114,7 +116,7 @@ Sie müssen das primäre Volume auswählen, das Sie in der Spiegelbeziehung verw
 
 
 
-. Wählen Sie *Weiter* und gehen Sie zu  3: Select the secondary volume.
+. Wählen Sie *Weiter* und gehen Sie zu <<Schritt 3: Wählen Sie das sekundäre Volumen>>.
 
 
 
@@ -124,6 +126,7 @@ Sie müssen das primäre Volume auswählen, das Sie in der Spiegelbeziehung verw
 [role="lead"]
 Sie müssen das sekundäre Volume auswählen, das Sie für die Spiegelbeziehung verwenden möchten, und dessen reservierte Kapazität zuweisen. Alle Volumes, die der Spiegelungs-Consistency Group auf dem Remote-Speicher-Array hinzugefügt werden, übernehmen die sekundäre Rolle in der Spiegelbeziehung.
 
+.Über diese Aufgabe
 Wenn Sie ein sekundäres Volume auf dem Remote-Speicher-Array auswählen, zeigt das System eine Liste aller berechtigten Volumes für dieses gespiegelte Paar an. Alle Volumes, die nicht für die Verwendung geeignet sind, werden in dieser Liste nicht angezeigt.
 
 .Schritte
@@ -148,6 +151,7 @@ Wenn Sie ein sekundäres Volume auf dem Remote-Speicher-Array auswählen, zeigt 
 . Wählen Sie *Fertig stellen*, um die asynchrone Spiegelsequenz abzuschließen.
 
 
+.Ergebnisse
 System Manager führt die folgenden Aktionen durch:
 
 * Startet die erste Synchronisierung zwischen dem lokalen Speicher-Array und dem Remote-Speicher-Array.

@@ -20,6 +20,7 @@ Sie können automatische Überprüfungen auf widerrief Zertifikate aktivieren, s
 * Wenn Sie Ihren eigenen OCSP-Server angeben möchten, müssen Sie die URL dieses Servers kennen.
 
 
+.Über diese Aufgabe
 Während dieser Aufgabe können Sie einen OCSP-Server konfigurieren oder den in der Zertifikatdatei angegebenen Server verwenden. Der OCSP-Server prüft, ob die CA Zertifikate vor ihrem geplanten Ablaufdatum widerrufen hat, und blockiert dann den Zugriff des Benutzers auf einen Standort, wenn das Zertifikat widerrufen wird.
 
 .Schritte
@@ -38,4 +39,5 @@ Sie können auch die Überprüfung des Widerrufs über die Registerkarte Schlüs
 . Klicken Sie Auf *Speichern*.
 
 
+.Ergebnis
 Wenn das Speicher-Array versucht, eine Verbindung mit einem Server mit einem widerrufenen Zertifikat herzustellen, wird die Verbindung verweigert und ein Ereignis protokolliert.

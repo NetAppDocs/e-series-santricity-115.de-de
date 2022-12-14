@@ -32,6 +32,7 @@ Ein Zertifikat für den Schlüsselmanagementserver validiert den Server, damit d
 ====
 
 
+.Über diese Aufgabe
 In dieser Aufgabe wird beschrieben, wie Zertifikatdateien für die Authentifizierung zwischen den Speicher-Array-Controllern und dem Schlüsselverwaltungsserver hochgeladen werden.
 
 .Schritte
