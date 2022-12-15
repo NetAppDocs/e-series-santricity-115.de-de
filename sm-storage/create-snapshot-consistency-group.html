@@ -9070,7 +9070,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-15 19:59:26 +0000">11/15/2022</time>
+    <time datetime="2022-12-15 15:14:03 +0000">12/15/2022</time>
     
   
 
@@ -9086,6 +9086,7 @@
 <p>Um sicherzustellen, dass Sie über konsistente Kopien verfügen, können Sie einen Satz von mehreren Volumes erstellen, die als „<em>Snapshot Consistency Group</em>“ bezeichnet werden. Mit dieser Gruppe können Sie zur Wahrung der Konsistenz gleichzeitig Snapshot-Images aller Volumes erstellen. Jedes Volume, das zu einer Snapshot Konsistenzgruppe gehört, wird als „<em>Member Volume</em>“ bezeichnet. Wenn Sie einer Snapshot Konsistenzgruppe ein Volume hinzufügen, erstellt das System automatisch eine neue Snapshot-Gruppe, die diesem Mitglied-Volume entspricht.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Mit der Sequenz zur Erstellung von Snapshot-Konsistenzgruppen können Sie Mitglieder-Volumes für die Gruppe auswählen und den Mitglied-Volumes Kapazität zuweisen.</p>
 </div>
 <div class="paragraph">
@@ -9094,13 +9095,13 @@
 <div class="ulist">
 <ul>
 <li>
-<p>1: Add members</p>
+<p><a href="#schritt-1-mitglieder-hinzufügen">Schritt 1: Mitglieder hinzufügen</a></p>
 </li>
 <li>
-<p>2: Reserve capacity</p>
+<p><a href="#schritt-2-reservekapazität">Schritt 2: Reservekapazität</a></p>
 </li>
 <li>
-<p>3: Edit settings</p>
+<p><a href="#schritt-3-einstellungen-bearbeiten">Schritt 3: Einstellungen bearbeiten</a></p>
 </li>
 </ul>
 </div>
@@ -9113,6 +9114,7 @@
 <p>Sie können Mitglieder auswählen, um eine Sammlung von Volumes anzugeben, die die Snapshot-Konsistenzgruppe enthalten. Alle Aktionen, die Sie auf der Snapshot Konsistenzgruppe durchführen, werden gleichmäßig auf ausgewählte Mitglied-Volumes erweitert.</p>
 </div>
 <div class="paragraph">
+<div class="title">Bevor Sie beginnen</div>
 <p>Die Mitgliedvolumes müssen optimal sein.</p>
 </div>
 <div class="olist arabic">
@@ -9134,7 +9136,7 @@
 <p>Wählen Sie die Volumes aus, die der Snapshot-Konsistenzgruppe als Mitgliedvolumes hinzugefügt werden sollen.</p>
 </li>
 <li>
-<p>Klicken Sie auf <strong>Weiter</strong>, und gehen Sie zu  2: Reserve capacity.</p>
+<p>Klicken Sie auf <strong>Weiter</strong>, und gehen Sie zu <a href="#schritt-2-reservekapazität">Schritt 2: Reservekapazität</a>.</p>
 </li>
 </ol>
 </div>
@@ -9147,6 +9149,7 @@
 <p>Sie müssen der Snapshot-Konsistenzgruppe reservierte Kapazität zuweisen. System Manager legt die Volumes und die Kapazität auf Grundlage der Eigenschaften der Snapshot-Konsistenzgruppe vor. Sie können die empfohlene Konfiguration für reservierte Kapazität akzeptieren oder den zugewiesenen Storage anpassen.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Im Dialogfeld <strong>Reservekapazität</strong> werden in der Tabelle für den Volumenkandidaten nur die Kandidaten angezeigt, die die angegebene reservierte Kapazität unterstützen. Reservierte Kapazität ist die zugewiesene physische Kapazität, die für jeden Kopierdienst- und Storage-Objekt verwendet wird. Er ist nicht direkt vom Host lesbar.</p>
 </div>
 <div class="olist arabic">
@@ -9185,7 +9188,7 @@
 <p>(Optional) Wenn Sie die Einstellung für reservierte Standardkapazität ändern, klicken Sie auf <strong>Kandidaten aktualisieren</strong>, um die Kandidatenliste für die von Ihnen angegebene reservierte Kapazität zu aktualisieren.</p>
 </li>
 <li>
-<p>Klicken Sie auf <strong>Weiter</strong>, und gehen Sie zu  3: Edit settings.</p>
+<p>Klicken Sie auf <strong>Weiter</strong>, und gehen Sie zu <a href="#schritt-3-einstellungen-bearbeiten">Schritt 3: Einstellungen bearbeiten</a>.</p>
 </li>
 </ol>
 </div>
@@ -9202,8 +9205,8 @@
 <ol class="arabic">
 <li>
 <p>Übernehmen Sie die Standardeinstellungen für die Snapshot-Konsistenzgruppe oder ändern Sie diese je nach Bedarf.</p>
-<div class="exampleblock">
-<div class="title">Beispiel 1. Felddetails</div>
+<details>
+<summary class="title">Felddetails</summary>
 <div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9273,7 +9276,7 @@
 </tbody>
 </table>
 </div>
-</div>
+</details>
 </li>
 <li>
 <p>Klicken Sie nach der Konfiguration Ihrer Snapshot Consistency Group auf <strong>Finish</strong>.</p>

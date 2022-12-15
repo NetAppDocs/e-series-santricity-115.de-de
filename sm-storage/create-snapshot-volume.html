@@ -9070,7 +9070,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-15 19:59:26 +0000">11/15/2022</time>
+    <time datetime="2022-12-15 15:14:03 +0000">12/15/2022</time>
     
   
 
@@ -9086,6 +9086,7 @@
 <p>Sie erstellen ein Snapshot-Volume, um Host-Zugriff auf ein Snapshot-Image eines Volumes oder einer Snapshot-Konsistenzgruppe zu ermöglichen. Sie können das Snapshot-Volume entweder als schreibgeschützt oder als Lese-/Schreibzugriff festlegen.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Mithilfe der Sequenz zur Erstellung von Snapshot Volumes können Sie ein Snapshot Volume aus einem Snapshot Image erstellen und Optionen zur Zuweisung reservierter Kapazität bereitstellen, wenn das Volume gelesen/geschrieben wird. Ein Snapshot Volume kann wie folgt konfiguriert werden:</p>
 </div>
 <div class="ulist">
@@ -9104,16 +9105,16 @@
 <div class="ulist">
 <ul>
 <li>
-<p>1: Review members</p>
+<p><a href="#schritt-mitglieder-überprüfen">Schritt: Mitglieder überprüfen</a></p>
 </li>
 <li>
-<p>2: Assign to host</p>
+<p><a href="#schritt-2-host-zuweisen">Schritt 2: Host zuweisen</a></p>
 </li>
 <li>
-<p>3: Reserve capacity</p>
+<p><a href="#schritt-3-reservekapazität">Schritt 3: Reservekapazität</a></p>
 </li>
 <li>
-<p>4: Edit settings</p>
+<p><a href="#schritt-4-einstellungen-bearbeiten">Schritt 4: Einstellungen bearbeiten</a></p>
 </li>
 </ul>
 </div>
@@ -9147,7 +9148,7 @@
 </div>
 </li>
 <li>
-<p>Gehen Sie zu  2: Assign to host.</p>
+<p>Gehen Sie zu <a href="#schritt-2-host-zuweisen">Schritt 2: Host zuweisen</a>.</p>
 </li>
 </ol>
 </div>
@@ -9174,6 +9175,7 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Beachten Sie bei der Zuweisung von Volumes folgende Richtlinien:</p>
 </div>
 <div class="ulist">
@@ -9230,10 +9232,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Wenn Ihr Snapshot-Volumen gelesen/geschrieben wird, wird das Dialogfeld <strong>Kapazität überprüfen</strong> angezeigt. Gehen Sie zu  3: Reserve capacity.</p>
+<p>Wenn Ihr Snapshot-Volumen gelesen/geschrieben wird, wird das Dialogfeld <strong>Kapazität überprüfen</strong> angezeigt. Gehen Sie zu <a href="#schritt-3-reservekapazität">Schritt 3: Reservekapazität</a>.</p>
 </li>
 <li>
-<p>Wenn Ihr Snapshot-Volumen schreibgeschützt ist, wird das Dialogfeld <strong>Priorität bearbeiten</strong> angezeigt. Gehen Sie zu  4: Edit settings.</p>
+<p>Wenn Ihr Snapshot-Volumen schreibgeschützt ist, wird das Dialogfeld <strong>Priorität bearbeiten</strong> angezeigt. Gehen Sie zu <a href="#schritt-4-einstellungen-bearbeiten">Schritt 4: Einstellungen bearbeiten</a>.</p>
 </li>
 </ul>
 </div>
@@ -9249,6 +9251,7 @@
 <p>Sie müssen eine reservierte Kapazität einem Lese-/Schreib-Snapshot-Volumen zuweisen. System Manager legt die Volumes und die Kapazität basierend auf den Eigenschaften des Basis-Volume oder der Snapshot-Konsistenzgruppe vor. Sie können die empfohlene Konfiguration für reservierte Kapazität akzeptieren oder den zugewiesenen Storage anpassen.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Sie können die reservierte Kapazität des Snapshot-Volumes je nach Bedarf erhöhen oder verringern. Wenn Sie feststellen, dass die reservierte Snapshot Kapazität größer ist, als Sie benötigen, können Sie ihre Größe verringern, um Speicherplatz freizugeben, der von anderen logischen Volumes benötigt wird.</p>
 </div>
 <div class="olist arabic">
@@ -9296,7 +9299,7 @@
 <p>(Optional) Wenn Sie das Snapshot-Volume für eine Snapshot-Konsistenzgruppe erstellen, wird in der Tabelle Kandidaten für reservierte Kapazität die Option <strong>Kandidaten ändern</strong> angezeigt. Klicken Sie auf <strong>Kandidaten ändern</strong>, um einen anderen Kandidaten für reservierte Kapazität auszuwählen.</p>
 </li>
 <li>
-<p>Klicken Sie auf <strong>Weiter</strong>, und gehen Sie zu  4: Edit settings.</p>
+<p>Klicken Sie auf <strong>Weiter</strong>, und gehen Sie zu <a href="#schritt-4-einstellungen-bearbeiten">Schritt 4: Einstellungen bearbeiten</a>.</p>
 </li>
 </ol>
 </div>
@@ -9309,6 +9312,7 @@
 <p>Sie können die Einstellungen für ein Snapshot-Volume, z. B. Name, Caching, Warnmeldungen für reservierte Kapazität, usw. ändern.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Sie können das Volume einem SSD-Cache (Solid State Disk) hinzufügen, um die schreibgeschützte Performance zu verbessern. SSD-Cache besteht aus einer Reihe von SSD-Laufwerken, die Sie in Ihrem Storage Array logisch gruppieren.</p>
 </div>
 <div class="olist arabic">
@@ -9316,8 +9320,8 @@
 <ol class="arabic">
 <li>
 <p>Übernehmen oder ändern Sie die Einstellungen für das Snapshot-Volume je nach Bedarf.</p>
-<div class="exampleblock">
-<div class="title">Beispiel 1. Felddetails</div>
+<details>
+<summary class="title">Felddetails</summary>
 <div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9372,7 +9376,7 @@
 </tbody>
 </table>
 </div>
-</div>
+</details>
 </li>
 <li>
 <p>Prüfen Sie die Konfiguration des Snapshot-Volumes. Klicken Sie auf <strong>Zurück</strong>, um Änderungen vorzunehmen.</p>
@@ -9383,6 +9387,7 @@
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Ergebnisse</div>
 <p>System Manager erstellt das Snapshot Volume im normalen Zustand.</p>
 </div>
 <div class="paragraph">
